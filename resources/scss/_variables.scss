@@ -1,0 +1,27 @@
+/* Fonts */
+@import url('https://fonts.googleapis.com/css2?family=Roboto+Mono:wght@300;400;600&display=swap');
+$font-family: 'Roboto Mono', monospace;
+
+:root {
+  --main-color: #0066FF;
+  --text-color: #9698A6;
+
+  [data-theme="light"] {
+    --title-color: #2D314D;
+    --bg-color: #EFF1F3;
+  }
+  
+  [data-theme="dark"] {
+    --title-color: #FFFFFF;
+    --bg-color: #2D314D;
+  }
+}
+
+/* Font size */
+$font-sm: 1rem;
+$font-med: 1.25rem;
+$font-lg: 1.5rem;
+$font-xlg: 3rem;
+
+/* Box shadow */
+$shadow: 0 0.125rem 0.5rem -0.125rem #b6b8b8;
