@@ -67,7 +67,8 @@
 
     &:hover {
       color: var(--main-color);
-      transition: color 300ms ease-in-out;
+      transform: scale(1.05);
+      transition: all 300ms ease-in-out;
     }
   }
 
