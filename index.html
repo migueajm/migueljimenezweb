@@ -6,34 +6,35 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Miguel Angel Jimenez | Portfolio</title>
   <meta name="description" content="Bienvenido a mi portafoolio web, podras encontrar un poco sobre mi trabajo y mis servicios">
-  <link rel="stylesheet" href="resources/scss/style.css">
+  <link rel="stylesheet" href="style.css">
 </head>
 <body>
   <header class="header">
     <div class="overlay has-fade"></div>
     <nav class="grid grid-pi-c">
-      <a class="header__logo" href="#">MAJM97</a>
+      <a class="header__logo" href="#">{MAJM97}</a>
       <a id="btnMenu" class="header__toggle hide-for-desktop"><span></span><span></span><span></span></a>
-      <ul class="header__links hide-for-mobile">
-        <li><a href="#home">Home</a></li>
-        <li><a href="#about">About</a></li>
-        <li><a href="#skills">Skills</a></li>
+      <ul class="header__links flex hide-for-mobile">
+        <li><a class="active" href="#home">Home</a></li>
+        <li><a href="#resume">Resume</a></li>
         <li><a href="#portfolio">Portfolio</a></li>
-        <li><a href="#blog">Blog</a></li>
+        <!-- <li><a href="#blog">Blog</a></li> -->
       </ul>
       <div class="header__social">
-        <a href="">GH</a>
-        <a href="">TW</a>
-        <a href="">LK</a>
+        <a href="https://github.com/MigueAJM"><span class="iconify" data-icon="akar-icons:github-fill"></span></a>
+        <a href="https://twitter.com/MigueAJM"><span class="iconify" data-icon="akar-icons:twitter-fill"></span></a>
+        <a href="https://www.linkedin.com/in/miguel-angel-jimenez-4226351ba/"><span class="iconify" data-icon="akar-icons:linkedin-fill"></span></a>
       </div>
     </nav>
     <div class="header__menu has-fade">
       <a href="#home">Home</a>
-      <a href="#about">About</a>
-      <a href="#skills">Skills</a>
+      <a href="#resume">Resume</a>
       <a href="#portfolio">Portfolio</a>
-      <a href="#blog">Blog</a>
+      <!-- <a href="#blog">Blog</a> -->
     </div>
   </header>
+
+  <script src="https://code.iconify.design/2/2.0.3/iconify.min.js"></script>
+  <script src="resources/js/app.js"></script>
 </body>
 </html>

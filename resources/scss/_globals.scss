@@ -59,6 +59,10 @@ a, a:visited, a:hover {
   text-decoration: none;
 }
 
+ul {
+  list-style: none;
+}
+
 .section {
   padding: 0.5rem 0 3rem;
 
@@ -68,13 +72,21 @@ a, a:visited, a:hover {
 }
 
 .container {
-  margin-right: 12%;
-  margin-left: 12%;
+  margin-right: 10%;
+  margin-left: 10%;
 }
 
 img {
   width: 100%;
   height: auto;
+}
+
+.flex {
+  display: flex;
+
+  &-jc-c {
+    justify-content: center;
+  }
 }
 
 .grid {
