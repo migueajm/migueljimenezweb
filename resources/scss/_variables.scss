@@ -6,16 +6,17 @@ $font-family: 'Roboto Mono', monospace;
   --main-color: #1148FD;
   --text-color: #6E7787;
   --title-color: #1C1F22;
-  --bg-color: #F3F5F7;
+  --bg-color: #FFF;
 }
 
-[data-theme="dark"] {
+[data-theme='dark'] {
+  --main-color: #08D665;
   --title-color: #FFFFFF;
   --text-color: #CED6DE;
   --bg-color: #041123;
 }
 /* Font size */
-$font-sm: 1rem;
+$font-sm: 1rem; 
 $font-med: 1.25rem;
 $font-lg: 1.5rem;
 $font-xlg: 3rem;

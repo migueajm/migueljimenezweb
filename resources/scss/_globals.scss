@@ -136,6 +136,11 @@ img {
   border: 1px solid rgba( 255, 255, 255, 0.18 );
 }
 
+.effect {
+  position: absolute;
+  z-index: -1;
+}
+
 .hide-for-mobile {
   @include breakpoint-down(medium) {
     display: none;

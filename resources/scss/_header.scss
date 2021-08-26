@@ -1,8 +1,11 @@
 .header {
   width: 100%;
   position: relative;
-  height: 3.5rem;
-  box-shadow: 0.125rem 0.125rem 0.125rem #E7E5E5;  
+  height: 4rem;
+  position: fixed;
+  background-color: var(--bg-color);
+  z-index: 1;
+  border-bottom: 1px solid var(--text-color);
 
   &.open {
     .header__toggle {
@@ -61,7 +64,7 @@
   }
 
   &__logo {
-    font-size: $font-med;
+    font-size: $font-lg;
     font-weight: bold;
     color: var(--text-color);
 
@@ -73,6 +76,8 @@
   }
 
   &__toggle {
+    position: absolute;
+    right: 1rem;
     > span {
       display: block;
       width: 1.625rem;
@@ -93,7 +98,7 @@
     left: 50%;
     top: 4rem;
     transform: translate(-50%);
-    background-color: #FFF;
+    background-color: var(--bg-color);
     padding: 1rem;
     border-radius: 0.5rem;
 
@@ -119,6 +124,14 @@
         color: var(--main-color);
         transition: color 300ms ease-in-out;
       }
+      &:last-child {
+        position: absolute;
+        right: 3.5rem;
+      }
+    }
+
+    .darkmode {
+      color: var(--main-color);
     }
   }
 

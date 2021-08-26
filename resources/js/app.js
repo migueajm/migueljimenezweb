@@ -37,3 +37,16 @@ links.forEach((link) => {
     action.target.classList.add('active');
   });
 });
+
+const tooggleSwitch = document.querySelector('#toggleSwitch');
+let theme = document.querySelector('[data-theme]');
+tooggleSwitch.addEventListener('click', () => {
+  if(theme.getAttribute('data-theme') == 'light') {
+    theme.setAttribute('data-theme', 'dark');
+    tooggleSwitch.classList.toggle('darkmode');
+  }
+  else {
+    theme.setAttribute('data-theme', 'light');
+    tooggleSwitch.classList.toggle('darkmode');
+  }
+});
