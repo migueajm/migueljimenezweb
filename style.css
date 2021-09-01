@@ -6,6 +6,7 @@
   --text-color: #6E7787;
   --title-color: #1C1F22;
   --bg-color: #EBF3FF;
+  --bg-footer: #6E7787;
 }
 
 [data-theme=dark] {
@@ -13,6 +14,7 @@
   --title-color: #FFFFFF;
   --text-color: #CED6DE;
   --bg-color: #041123;
+  --bg-footer: #000;
 }
 
 /* Font size */
@@ -236,11 +238,11 @@ img {
 }
 
 footer {
-  width: 100%;
-  background-color: #1c1f22;
+  background-color: var(--bg-footer);
   text-align: center;
   color: #FFF;
   padding: 1rem;
+  transition: all 300ms ease-in-out;
 }
 footer div, footer span {
   font-weight: bold;
@@ -311,7 +313,7 @@ footer a {
 }
 .header__toggle {
   position: absolute;
-  right: 0.5rem;
+  right: 1.5rem;
   top: 1.325rem;
 }
 .header__toggle > span {
@@ -357,7 +359,7 @@ footer a {
 }
 .header__social a:last-child {
   position: absolute;
-  right: 2.5rem;
+  right: 3.5rem;
 }
 .header__social .darkmode {
   color: var(--main-color);
