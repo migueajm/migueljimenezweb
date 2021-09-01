@@ -46,13 +46,18 @@
       grid-column: 1;
       grid-row: 2;
     }
-    span, p, h2 {
-      color: var(--main-color);
-      font-weight: bold;
-    }
-    
+
     h2 {
       color: var(--title-color);
+    }
+
+    h1 ,h2, span, .career {
+      font-weight: bold;
+    }
+
+    span, .career {
+      color: var(--main-color);
+      transition: color 300ms ease-in-out;
     }
   }
 
