@@ -152,3 +152,20 @@ img {
     display: none;
   }
 }
+
+footer {
+  width: 100%;
+  background-color: #1c1f22;
+  text-align: center;
+  color: #FFF;
+  padding: 1rem;
+
+  div, span {
+    font-weight: bold;
+  }
+
+  a {
+    color: #00ACEE;
+    font-size: 2rem;
+  }
+}
