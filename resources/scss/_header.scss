@@ -127,14 +127,16 @@
         color: var(--main-color);
         transition: color 300ms ease-in-out;
       }
+
       &:last-child {
         position: absolute;
         right: 3.5rem;
+        color: var(--main-color);
       }
     }
 
     .darkmode {
-      color: var(--main-color);
+      color: var(--text-color) !important;
     }
   }
 
