@@ -212,6 +212,19 @@ img {
   opacity: 1;
 }
 
+.card {
+  background-color: #FFF;
+  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
+  transition: 0.3s;
+}
+.card:hover {
+  box-shadow: 0 8px 16px 0 rgba(0, 0, 0, 0.2);
+}
+.card__container {
+  text-align: justify;
+  padding: 2px 16px;
+}
+
 .glassmorphism {
   background: rgba(255, 255, 255, 0.25);
   box-shadow: 0 8px 32px 0 rgba(31, 38, 135, 0.37);
@@ -446,6 +459,7 @@ footer a {
 
 .resume__data {
   grid-template-columns: repeat(2, 1fr);
+  padding-bottom: 2rem;
 }
 @media (max-width: 39.9375em) {
   .resume__data {
@@ -477,7 +491,7 @@ footer a {
   padding-top: 2rem;
   text-align: center;
 }
-.resume__data p {
+.resume__info p {
   text-align: justify;
   margin-bottom: 0;
 }
