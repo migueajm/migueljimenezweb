@@ -194,6 +194,7 @@ img {
   cursor: pointer;
   color: #FFF;
   font-size: 1rem;
+  font-weight: 400;
   transition: opacity 300ms ease-in-out;
   overflow: hidden;
 }
@@ -212,17 +213,44 @@ img {
   opacity: 1;
 }
 
-.card {
-  background-color: #FFF;
-  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
-  transition: 0.3s;
+.flip-card {
+  background-color: transparent;
+  width: 100%;
+  height: 18rem;
+  perspective: 1000px;
+  transition: all 0.3s ease-in-out;
 }
-.card:hover {
-  box-shadow: 0 8px 16px 0 rgba(0, 0, 0, 0.2);
-}
-.card__container {
+.flip-card-inner {
+  position: relative;
+  width: 100%;
+  height: 100%;
   text-align: justify;
-  padding: 2px 16px;
+  transition: transform 0.8s;
+  transform-style: preserve-3d;
+}
+.flip-card:hover .flip-card-inner {
+  transform: rotateY(180deg);
+}
+.flip-card-front, .flip-card-back {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  -webkit-backface-visibility: hidden;
+  /* Safari */
+  backface-visibility: hidden;
+}
+.flip-card-front {
+  background-color: #bbb;
+  color: black;
+}
+.flip-card-front img {
+  height: 100%;
+}
+.flip-card-back {
+  background-color: var(--bg-color);
+  color: var(--text-color);
+  /* padding: 2rem; */
+  transform: rotateY(180deg);
 }
 
 .glassmorphism {
@@ -496,6 +524,10 @@ footer a {
   margin-bottom: 0;
 }
 
-/* @import 'portfolio'; */
+.portfolio__projects {
+  padding: 1.5rem 0 1.5rem 0;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 2rem;
+}
 
 /*# sourceMappingURL=style.css.map */
