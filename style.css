@@ -1,4 +1,4 @@
-/* CSS By MAJM97 Agosto/2021 */
+t/* CSS By MAJM97 Agosto/2021 */
 /* Fonts */
 @import url("https://fonts.googleapis.com/css2?family=Roboto+Mono:wght@300;400;600&display=swap");
 :root {
@@ -247,7 +247,7 @@ img {
   height: 100%;
 }
 .flip-card-back {
-  background-color: var(--main-color);
+  background-color: var(--text-color);
   color: #FFF;
   /* padding: 2rem; */
   transform: rotateY(180deg);
