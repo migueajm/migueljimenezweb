@@ -8,6 +8,7 @@ $font-family: 'Roboto Mono', monospace;
   --title-color: #1C1F22;
   --bg-color: #EBF3FF;
   --bg-footer: #6E7787;
+
 }
 
 [data-theme='dark'] {
@@ -16,7 +17,6 @@ $font-family: 'Roboto Mono', monospace;
   --text-color: #CED6DE;
   --bg-color: #041123;
   --bg-footer: #000;
-
 }
 /* Font size */
 $font-sm: 1rem; 

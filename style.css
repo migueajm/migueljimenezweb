@@ -222,6 +222,11 @@ img {
   overflow: hidden;
   transition: all 0.3s ease-in-out;
 }
+@media (max-width: 63.9375em) {
+  .flip-card {
+    height: 15rem;
+  }
+}
 .flip-card-inner {
   position: relative;
   width: 100%;
@@ -241,18 +246,17 @@ img {
   /* Safari */
   backface-visibility: hidden;
 }
-.flip-card-front {
-  background-color: #bbb;
-  color: #FFF;
-}
 .flip-card-front img {
   height: 100%;
 }
 .flip-card-back {
-  background-color: var(--text-color);
-  color: #FFF;
+  background-color: var(--bg-color);
   /* padding: 2rem; */
   transform: rotateY(180deg);
+}
+.flip-card-back h3 {
+  color: var(--title-color);
+  font-weight: bold;
 }
 .flip-card-back h3, .flip-card-back p {
   padding: 1rem;
@@ -533,7 +537,7 @@ footer a {
   grid-template-columns: repeat(2, 1fr);
   padding-bottom: 2rem;
 }
-@media (max-width: 39.9375em) {
+@media (max-width: 63.9375em) {
   .resume__data {
     grid-template-columns: repeat(1, 1fr);
   }

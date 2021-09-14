@@ -137,6 +137,9 @@ img {
   border-radius: 0.5rem;
   overflow: hidden;
   transition: all 0.3s ease-in-out;
+  @include breakpoint-down(medium) {
+    height: 15rem;
+  }
 
   &-inner {
     position: relative;
@@ -160,19 +163,20 @@ img {
   }
 
   &-front {
-    background-color: #bbb;
-    color: #FFF;
-
     img {
       height: 100%;
     }
   }
 
   &-back {
-    background-color: var(--text-color);
-    color: #FFF;
+    background-color: var(--bg-color);
     /* padding: 2rem; */
     transform: rotateY(180deg);
+
+    h3 {
+      color: var(--title-color);
+      font-weight: bold;
+    }
 
     h3, p {
       padding: 1rem;
