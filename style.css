@@ -210,7 +210,7 @@ img {
   transition: opacity 150ms ease-in-out;
 }
 .button:hover {
-  opacity: 1;
+  opacity: 0.7;
 }
 
 .flip-card {
@@ -224,7 +224,7 @@ img {
   position: relative;
   width: 100%;
   height: 100%;
-  text-align: justify;
+  text-align: center;
   transition: transform 0.8s;
   transform-style: preserve-3d;
 }
@@ -247,10 +247,51 @@ img {
   height: 100%;
 }
 .flip-card-back {
-  background-color: var(--bg-color);
-  color: var(--text-color);
+  background-color: var(--main-color);
+  color: #FFF;
   /* padding: 2rem; */
   transform: rotateY(180deg);
+}
+.flip-card-back h3, .flip-card-back p {
+  padding: 1rem;
+}
+
+.tooltip {
+  position: relative;
+  display: inline-block;
+}
+
+.tooltip .tooltiptext {
+  visibility: hidden;
+  width: 10rem;
+  background-color: #555;
+  color: #fff;
+  text-align: center;
+  border-radius: 6px;
+  padding: 5px 0;
+  position: absolute;
+  z-index: 1;
+  bottom: 125%;
+  left: 50%;
+  margin-left: -60px;
+  opacity: 0;
+  transition: opacity 0.3s;
+}
+
+.tooltip .tooltiptext::after {
+  content: "";
+  position: absolute;
+  top: 100%;
+  left: 50%;
+  margin-left: -5px;
+  border-width: 5px;
+  border-style: solid;
+  border-color: #555 transparent transparent transparent;
+}
+
+.tooltip:hover .tooltiptext {
+  visibility: visible;
+  opacity: 1;
 }
 
 .glassmorphism {
@@ -338,9 +379,7 @@ footer a {
   transition: color 300ms ease-in-out;
 }
 .header__links .active {
-  border-bottom: 3px solid var(--text-color);
-}
-.header__links .active:hover {
+  color: var(--main-color);
   border-bottom: 3px solid var(--main-color);
 }
 .header__logo {
@@ -485,6 +524,9 @@ footer a {
   font-size: 2.75rem;
 }
 
+.resume {
+  padding: 3.5rem;
+}
 .resume__data {
   grid-template-columns: repeat(2, 1fr);
   padding-bottom: 2rem;
@@ -523,11 +565,53 @@ footer a {
   text-align: justify;
   margin-bottom: 0;
 }
+.resume__info a {
+  margin-top: 1rem;
+  position: absolute;
+  right: 15%;
+}
 
+.portfolio .section__title, .portfolio h3 {
+  text-align: center;
+}
 .portfolio__projects {
   padding: 1.5rem 0 1.5rem 0;
   grid-template-columns: repeat(3, 1fr);
   gap: 2rem;
+}
+@media (max-width: 63.9375em) {
+  .portfolio__projects {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+@media (max-width: 39.9375em) {
+  .portfolio__projects {
+    grid-template-columns: repeat(1, 1fr);
+  }
+}
+.portfolio__services {
+  padding: 1.5rem 0 1.5rem 0;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 2rem;
+}
+@media (max-width: 63.9375em) {
+  .portfolio__services {
+    grid-template-columns: repeat(3, 1fr);
+  }
+}
+@media (max-width: 39.9375em) {
+  .portfolio__services {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+.portfolio .tooltip {
+  width: 5rem;
+  height: 5rem;
+}
+.portfolio .iconify {
+  font-size: 4rem;
+  padding: 0.5rem;
+  text-align: center;
 }
 
 /*# sourceMappingURL=style.css.map */

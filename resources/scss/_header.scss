@@ -55,11 +55,8 @@
     }
 
     .active {
-      border-bottom: 3px solid var(--text-color);
-
-      &:hover {
-        border-bottom: 3px solid var(--main-color);
-      }
+      color: var(--main-color);
+      border-bottom: 3px solid var(--main-color);
     }
   }
 
