@@ -1,15 +1,18 @@
 <!DOCTYPE html>
 <html lang="en" data-theme="light">
+
 <head>
   <meta charset="UTF-8">
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Miguel Angel Jimenez | Portfolio</title>
   <meta name="description" content="Welcome, Portfolio of MAJM97">
-  <meta name="keywords" content="web, developer, projects, services, skills, miguel, jimenez, angel, javascript, laravel, php, disign">
+  <meta name="keywords"
+    content="web, developer, projects, services, skills, miguel, jimenez, angel, javascript, laravel, php, disign">
   <meta name="author" content="Miguel Angel Jimenez">
   <link rel="stylesheet" href="style.css">
 </head>
+
 <body>
   <header class="header">
     <div class="overlay has-fade"></div>
@@ -25,7 +28,8 @@
       <div class="header__social">
         <a href="https://github.com/MigueAJM"><span class="iconify" data-icon="akar-icons:github-fill"></span></a>
         <a href="https://twitter.com/MigueAJM"><span class="iconify" data-icon="akar-icons:twitter-fill"></span></a>
-        <a href="https://www.linkedin.com/in/miguel-angel-jimenez-4226351ba/"><span class="iconify" data-icon="akar-icons:linkedin-fill"></span></a>
+        <a href="https://www.linkedin.com/in/miguel-angel-jimenez-4226351ba/"><span class="iconify"
+            data-icon="akar-icons:linkedin-fill"></span></a>
         <a id="toggleSwitch" class="tooltip"><span class="iconify" data-icon="wi:solar-eclipse"></span></a>
       </div>
     </nav>
@@ -33,26 +37,21 @@
       <a href="#home">Home</a>
       <a href="#resume">Resume</a>
       <a href="#portfolio">Portfolio</a>
-      <!-- <a href="#blog">Blog</a> -->
     </div>
   </header>
 
-  <div class="effect effect-1">
-    <div></div><div></div><div></div><div></div><div></div>
-    <div></div><div></div><div></div><div></div><div></div>
-    <div></div><div></div><div></div><div></div><div></div>
-  </div>
+  <div id="effect1" class="effect effect-1"></div>
   <section id="home" class="home section">
+    <div id="skills"></div>
     <div class="container grid grid-pi-c">
       <div class="home__img grid grid-pi-c">
         <img src="resources/img/profile-picture.jpg" alt="Miguel Angel Jimenez">
       </div>
       <div class="home__data">
-        <h1>Welcome, I'm<br><span>Miguel Angel Jimenez</span></h1>
-        <h2>Information and Communications Technologies Engineer</h2>
-        <h2 class="career">Web Developer</h2>
+        <h1>Welcome, I'm<br><span id="author"></span></h1>
+        <h2 id="authorDescription"></h2>
+        <h2 id="authorDev" class="career"></h2>
       </div>
-      <!-- <div class="home__projects"></div> -->
     </div>
   </section>
 
@@ -75,14 +74,14 @@
           <p>
             I'm a ICT Engineer, graduated from the Technological Institute of ROQUE.<br>
             I'm currently specializing in web development, I have worked for 6 months in CRODE-CELAYA in the
-            development and maintenance of modules of web  application.<br>
+            development and maintenance of modules of web application.<br>
             I'm currently working on a personal blog to have my space for the thigns that I learn over time.<br>
             In my free time I usually practice sports with my friends.<br>
             I love soccer &#128147;.
           </p>
           <a href="resources/doc/CV ING-TECNOLOGIAS-INFORMACIÓN-COMUNICACIONES MIGUEL-ANGEL-JIMENEZ.pdf"
-             ownload="CV_ING_TECNOLOGIAS_INFORMACIÓN_COMUNICACIONES_MIGUEL_ANGEL_JIMENEZ.pdf" class="button">
-             Download CV
+            ownload="CV_ING_TECNOLOGIAS_INFORMACIÓN_COMUNICACIONES_MIGUEL_ANGEL_JIMENEZ.pdf" class="button">
+            Download CV
           </a>
         </div>
       </div>
@@ -100,21 +99,23 @@
             </div>
             <div class="flip-card-back">
               <h3>WebApp CRODE</h3>
-              <p>Computer asset equipment service requests<br>Web application for the administration & control of the entire IT department team</p>
+              <p>Computer asset equipment service requests<br>Web application for the administration & control of the
+                entire IT department team</p>
             </div>
           </div>
-        </div> 
-        <a href="https://github.com/MigueAJM/migueljimenezweb" class="flip-card">
+        </div>
+        <div class="flip-card">
           <div class="flip-card-inner">
             <div class="flip-card-front">
-              <img src="resources/img/projects/majm97.png" alt="Avatar">
+              <a href="https://github.com/MigueAJM/migueljimenezweb"><img src="resources/img/projects/majm97.png"
+                  alt="Avatar"></a>
             </div>
             <div class="flip-card-back">
               <h3>Portfolio MAJM97</h3>
               <p>My space on the cloud... :)</p>
             </div>
           </div>
-        </a>
+        </div>
       </div>
       <h3>Services</h3>
       <div class="portfolio__services grid grid-pi-c">
@@ -134,19 +135,21 @@
           <span class="iconify" data-icon="cib:app-store-ios"></span>
           <span class="tooltiptext">Mobile application IOS</span>
         </div>
-        
+
       </div>
     </div>
   </section>
   <footer>
     <div>
       Contact me:<br>
-      <a href="https://twitter.com/MigueAJM"><span class="iconify" data-icon="akar-icons:twitter-fill"></span></a>
+      <a href="https://twitter.com/MigueAJM"><span class="iconify" data-icon="akar-icons:twitter-fill"></span>
+      </a>
     </div>
-    <p>&copy; 2021 Developed with &#128147; By: <span>Miguel Angel Jimenez<span></p>
+    <p>&copy; <label id="date-dev"></label> Developed with &#128147; By: <span id="authorFooter"><span></p>
   </footer>
   <script src="https://code.iconify.design/2/2.0.3/iconify.min.js"></script>
   <script src="resources/js/app.js"></script>
-  <!-- <script src="resources/js/projects.js"></script> -->
+  <script src="resources/js/projects.js"></script>
 </body>
+
 </html>
