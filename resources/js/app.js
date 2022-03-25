@@ -1,13 +1,53 @@
-const btnMenu = document.querySelector("#btnMenu");
-const overlay = document.querySelector(".overlay");
-const body = document.querySelector("body");
-const header = document.querySelector(".header");
-const fadeElems = document.querySelectorAll(".has-fade");
-const dateDev = document.querySelector("#date-dev");
-let date = new Date();
-let year = date.getFullYear();
+const btnMenu = document.querySelector("#btnMenu"),
+  overlay = document.querySelector(".overlay"),
+  body = document.querySelector("body"),
+  header = document.querySelector(".header"),
+  fadeElems = document.querySelectorAll(".has-fade"),
+  dateDev = document.querySelector("#date-dev"),
+  author = document.querySelector("#author"),
+  authorFooter = document.querySelector("#authorFooter"),
+  authorDescription = document.querySelector("#authorDescription"),
+  dauthorDev = document.querySelector("#authorDev"),
+  effect = document.querySelector("#effect1"),
+  skills = document.querySelector("#skills"),
+  classSkill = document.querySelectorAll(".skill"),
+  menuItems = document.querySelectorAll(".header__menu a"),
+  links = document.querySelectorAll(".header__links li a"),
+  theme = document.querySelector("[data-theme]"),
+  tooggleSwitch = document.querySelector("#toggleSwitch"),
+  OBJDATA = new Data();
+let skill = "",
+  data,
+  row = 0,
+  column = 0,
+  date = new Date(),
+  year = date.getFullYear();
 
-dateDev.append(`2021-${year}`);
+document.addEventListener("DOMContentLoaded", () => {
+  dateDev.append(`2021-${year}`);
+  data = OBJDATA.getData();
+  author.append(`${data.migue.name}`);
+  authorFooter.append(`${data.migue.name}`);
+  authorDescription.append(`${data.migue.description}`);
+  authorDev.append(`${data.migue.dev}`);
+  effect.innerHTML =
+    "<div></div><div></div><div></div><div></div><div></div><div></div><div></div><div></div><div></div><div></div><div></div><div></div><div></div><div></div><div></div>";
+  data.migue.code.map((value) => {
+    skill += `
+    <div class="skill ${value.name} glassmorphism tooltip">
+      <img src="${value.image}" alt="${value.name}">
+      <span class="tooltiptext">${value.name}</span>
+    </div>
+  `;
+  });
+  classSkill.cssText = `
+    
+
+  `;
+  skills.innerHTML = skill;
+  console.log(data);
+});
+
 function toggleMenu() {
   if (header.classList.contains("open")) {
     // Close Hamburger Menu
@@ -33,14 +73,11 @@ btnMenu.addEventListener("click", () => {
   toggleMenu();
 });
 
-const menuItems = document.querySelectorAll(".header__menu a");
-
 menuItems.forEach((item) => {
   item.addEventListener("click", () => {
     toggleMenu();
   });
 });
-const links = document.querySelectorAll(".header__links li a");
 links.forEach((link) => {
   link.addEventListener("click", (action) => {
     /* console.log(action.target); */
@@ -49,8 +86,6 @@ links.forEach((link) => {
   });
 });
 
-const tooggleSwitch = document.querySelector("#toggleSwitch");
-let theme = document.querySelector("[data-theme]");
 tooggleSwitch.addEventListener("click", () => {
   if (theme.getAttribute("data-theme") == "light") {
     theme.setAttribute("data-theme", "dark");
