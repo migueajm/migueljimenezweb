@@ -620,28 +620,6 @@ footer a {
   grid-template-columns: repeat(4, 1fr);
   gap: 2rem;
 }
-@media (max-width: 63.9375em) {
-  .portfolio__services {
-    grid-template-columns: repeat(3, 1fr);
-  }
-}
-@media (max-width: 39.9375em) {
-  .portfolio__services {
-    grid-template-columns: repeat(2, 1fr);
-  }
-}
-.portfolio .tooltip {
-  width: 5rem;
-  height: 5rem;
-}
-.portfolio .iconify {
-  font-size: 4rem;
-  padding: 0.5rem;
-  text-align: center;
-}
-
-/*# sourceMappingURL=style.css.map */
-
 #skills {
   position: absolute;
   display: grid;
@@ -662,12 +640,12 @@ footer a {
 .Tailwind-CSS,
 .GitHub,
 .Barcelona,
-.MacOS {
+.MacOS,
+.Kotlin {
   grid-row: 3;
 }
 
 .Materialize {
-  grid-column: 4;
   grid-row: 4;
 }
 
@@ -704,7 +682,8 @@ footer a {
   grid-column: 3;
 }
 
-.SASS {
+.SASS,
+.America {
   grid-row: 7;
 }
 
@@ -732,7 +711,8 @@ footer a {
   grid-row: 11;
 }
 
-.MySQL {
+.MySQL,
+.Materialize {
   grid-column: 4;
 }
 
@@ -766,12 +746,6 @@ footer a {
   grid-column: 10;
 }
 
-.Barcelona,
-.Kotlin {
-  grid-column: 11;
-  grid-row: 3;
-}
-
 .JQuery,
 .Figma,
 .VSCode,
@@ -780,7 +754,9 @@ footer a {
 }
 
 .Swift,
-.Chrome {
+.Chrome,
+.Barcelona,
+.Kotlin {
   grid-column: 11;
 }
 
@@ -788,6 +764,164 @@ footer a {
   grid-row: 6;
 }
 
-.America {
-  grid-row: 8;
+@media (max-width: 63.9375em) {
+  .portfolio__services {
+    grid-template-columns: repeat(3, 1fr);
+  }
+  .Tailwind-CSS,
+  .Composer,
+  .GitHub,
+  .NodeJS,
+  .Bootstrap {
+    grid-column: 3;
+  }
+
+  .PostgreSQl {
+    grid-column: 4;
+  }
+
+  .Tailwind-CSS {
+    grid-row: 5;
+  }
+
+  .Composer,
+  .NodeJS,
+  .MySQL {
+    grid-column: 2;
+    grid-row: 6;
+  }
+
+  .Bootstrap,
+  .NodeJS,
+  .Mexico {
+    grid-row: 7;
+  }
+
+  .MySQL,
+  .PostgreSQl,
+  .Terminal,
+  .SQL,
+  .GitLab,
+  .Windows,
+  .Linux {
+    grid-row: 8;
+  }
+
+  .GitHub {
+    grid-row: 9;
+  }
 }
+@media (max-width: 39.9375em) {
+  .portfolio__services {
+    grid-template-columns: repeat(2, 1fr);
+  }
+  #skills {
+    grid-template-columns: repeat(8, calc(100vw / 8));
+    grid-template-rows: repeat(12, calc(100vh / 12));
+  }
+
+  .PHP,
+  .Materialize,
+  .Tailwind-CSS,
+  .PostgreSQl,
+  .Terminal,
+  .Tailwind-CSS,
+  .Composer,
+  .Windows,
+  .GitHub,
+  .GIT,
+  .Chrome {
+    grid-row: 2;
+  }
+
+  .Composer {
+    grid-column: 1;
+  }
+  .Tailwind-CSS {
+    grid-column: 2;
+  }
+  .Windows {
+    grid-column: 3;
+  }
+  .GitHub . {
+    grid-column: 2;
+  }
+  .Tailwind-CSS {
+    grid-column: 2;
+  }
+  .MacOS,
+  .Linux,
+  .Mexico,
+  .Barcelona,
+  .Apache,
+  .Swift,
+  .Chrome,
+  .Windows {
+    grid-column: 8;
+  }
+
+  .React,
+  .MySQL,
+  .SQL,
+  .GitLab {
+    grid-row: 7;
+  }
+  .React {
+    grid-column: 4;
+  }
+  .MySQL {
+    grid-column: 5;
+  }
+  .SQL {
+    grid-column: 6;
+  }
+  .GitLab,
+  .Chrome {
+    grid-column: 7;
+  }
+  .SQL,
+  .GIT {
+    grid-column: 6;
+  }
+  .Linux {
+    grid-row: 6;
+  }
+  .CSS,
+  .PHP,
+  .JQuery,
+  .Figma {
+    grid-column: 1;
+  }
+  .PHP {
+    grid-row: 6;
+  }
+  .Laravel,
+  .Symfony,
+  .Kotlin {
+    grid-row: 8;
+  }
+  .Kotlin,
+  .VSCode,
+  .America {
+    grid-column: 8;
+  }
+  .VSCode,
+  .JQuery {
+    grid-row: 9;
+  }
+  .Figma,
+  .America {
+    grid-row: 10;
+  }
+}
+.portfolio .tooltip {
+  width: 5rem;
+  height: 5rem;
+}
+.portfolio .iconify {
+  font-size: 4rem;
+  padding: 0.5rem;
+  text-align: center;
+}
+
+/*# sourceMappingURL=style.css.map */
