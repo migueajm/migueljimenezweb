@@ -15,8 +15,12 @@ const btnMenu = document.querySelector("#btnMenu"),
   links = document.querySelectorAll(".header__links li a"),
   theme = document.querySelector("[data-theme]"),
   tooggleSwitch = document.querySelector("#toggleSwitch"),
+  projects = document.querySelector("#projects"),
+  services = document.querySelector("#services"),
   OBJDATA = new Data();
 let skill = "",
+  project = "",
+  service = "",
   data,
   row = 0,
   column = 0,
@@ -35,13 +39,37 @@ document.addEventListener("DOMContentLoaded", () => {
   data.migue.code.map((value) => {
     skill += `
     <div class="skill ${value.name} glassmorphism tooltip ">
-      <img src="${value.image}" alt="${value.name}">
+    <img src="${value.image}" alt="${value.name}">
+    <span class="tooltiptext">${value.name}</span>
+    </div>
+    `;
+  });
+  data.migue.projects.map((value) => {
+    project += `
+    <div class="flip-card">
+      <div class="flip-card-inner">
+        <div class="flip-card-front">
+        <img src="${value.src}" alt="${value.alt}">
+        </div>
+        <div class="flip-card-back">
+          <h3>${value.name}</h3>
+          <p>${value.description}</p>
+        </div>
+      </div>
+    </div>
+    `;
+  });
+  data.migue.services.map((value) => {
+    service += `
+    <div class="glassmorphism tooltip">
+      <span class="iconify" data-icon="${value.icon}"></span>
       <span class="tooltiptext">${value.name}</span>
     </div>
     `;
   });
+  services.innerHTML = service;
+  projects.innerHTML = project;
   skills.innerHTML = skill;
-  console.log(data);
 });
 
 function toggleMenu() {

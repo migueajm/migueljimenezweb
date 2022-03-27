@@ -10,6 +10,24 @@ class Data {
         "Mobile application IOS",
       ],
     };
+    let services = [
+      {
+        name: "Web design",
+        icon: "et:mobile",
+      },
+      {
+        name: "Web application",
+        icon: "carbon:application-web",
+      },
+      {
+        name: "Mobile application Android",
+        icon: "cib:android-alt",
+      },
+      {
+        name: "Mobile application IOS",
+        icon: "cib:app-store-ios",
+      },
+    ];
     let code = [
       {
         name: "HTML",
@@ -151,22 +169,25 @@ class Data {
     let projects = [
       {
         name: "Solicitudes de servico de equipo de bienes informaticos",
+        alt: "WEB APP CRODE",
         src: src + "projects/appcrode.jpg",
         description:
-          "<p>Computer asset equipment service requests<br>Web application for the administration & control of the entire IT department team</p>",
+          "Computer asset equipment service requests<br>Web application for the administration & control of the entire IT department team",
         date: "March-July 2021",
         url: "Web Application Crode",
       },
       {
         name: "migueljimenezweb",
-        src: src + "projects/majm97.jpg",
+        alt: "PORTFOLIO",
+        src: src + "projects/majm97.png",
         description: "Portfolio web",
         date: "July-Agust 2021",
         url: "https://migueajm.github.io/migueljimenezweb/",
       },
       {
         name: "Listado de precios",
-        src: src + "projects/kurigage.jog",
+        alt: "MI PORTAL",
+        src: src + "projects/portal.png",
         description:
           "Listado de precios para facilitar a los usuarios la busqueda de articulos.",
         date: "January-March 2022",
@@ -181,6 +202,7 @@ class Data {
         title: "Miguel Angel Jimenez | Portfolio",
         code,
         projects,
+        services,
         menu,
       },
     };
