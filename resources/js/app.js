@@ -34,16 +34,12 @@ document.addEventListener("DOMContentLoaded", () => {
     "<div></div><div></div><div></div><div></div><div></div><div></div><div></div><div></div><div></div><div></div><div></div><div></div><div></div><div></div><div></div>";
   data.migue.code.map((value) => {
     skill += `
-    <div class="skill ${value.name} glassmorphism tooltip">
+    <div class="skill ${value.name} glassmorphism tooltip ">
       <img src="${value.image}" alt="${value.name}">
       <span class="tooltiptext">${value.name}</span>
     </div>
-  `;
+    `;
   });
-  classSkill.cssText = `
-    
-
-  `;
   skills.innerHTML = skill;
   console.log(data);
 });
