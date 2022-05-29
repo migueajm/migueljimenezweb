@@ -28,6 +28,7 @@ let skill = "",
   year = date.getFullYear();
 
 document.addEventListener("DOMContentLoaded", () => {
+  window.matchMedia && window.matchMedia('(prefers-color-scheme: dark)').matches ? theme.setAttribute("data-theme", "dark") : theme.setAttribute("data-theme", "light")
   dateDev.append(`2021-${year}`);
   data = OBJDATA.getData();
   author.append(`${data.migue.name}`);
