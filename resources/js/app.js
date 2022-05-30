@@ -27,12 +27,14 @@ let skill = "",
   row = 0,
   column = 0,
   date = new Date(),
-  year = date.getFullYear()
+  year = date.getFullYear(), code
 
 document.addEventListener("DOMContentLoaded", () => {
+  window.matchMedia && window.matchMedia('(prefers-color-scheme: dark)').matches ? theme.setAttribute("data-theme", "dark") : theme.setAttribute("data-theme", "light")
+  !localStorage.getItem('userTheme') ? localStorage.setItem('userTheme', theme.getAttribute('data-theme')) : 0
   HOMEIMG.setAttribute('style', 'z-index: 1')
   HOMEDATA.setAttribute('style', 'z-index: 1')
-  window.matchMedia && window.matchMedia('(prefers-color-scheme: dark)').matches ? theme.setAttribute("data-theme", "dark") : theme.setAttribute("data-theme", "light")
+  effect.setAttribute('style', 'z-index: 1')
   dateDev.append(`2021-${year}`);
   data = OBJDATA.getData();
   author.append(`${data.migue.name}`);
@@ -75,18 +77,17 @@ document.addEventListener("DOMContentLoaded", () => {
   services.innerHTML = service;
   projects.innerHTML = project;
   skills.innerHTML = skill;
-  row = [3,4,5,6,7,8,9,10,11]
-column = [1,2,3,4,5,6,7,8,9,10,11,12]
-
   setInterval(() => {
     data.migue.code.map(value => {
       column = random(1,12)
       row = random(3,11)
-      if(row > 2 && row < 12){
-        document.querySelector(`.${value.name}`).setAttribute('style', `
-          grid-column: ${column};
-          grid-row: ${row};
-        `)
+      if(row > 2){
+        if((row <= 5 || row > 8) && (column <= 5 || column > 11)){
+          document.querySelector(`.${value.name}`).setAttribute('style', `
+            grid-column: ${column};
+            grid-row: ${row};
+          `)
+        }
       }
     })
   }, 2000)
@@ -134,9 +135,11 @@ tooggleSwitch.addEventListener("click", () => {
   if (theme.getAttribute("data-theme") == "light") {
     theme.setAttribute("data-theme", "dark");
     tooggleSwitch.classList.toggle("darkmode");
+    localStorage.setItem('userTheme', theme.getAttribute('data-theme'))
   } else {
     theme.setAttribute("data-theme", "light");
     tooggleSwitch.classList.toggle("darkmode");
+    localStorage.setItem('userTheme', theme.getAttribute('data-theme'))
   }
 });
 
