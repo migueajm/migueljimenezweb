@@ -17,7 +17,9 @@ const btnMenu = document.querySelector("#btnMenu"),
   tooggleSwitch = document.querySelector("#toggleSwitch"),
   projects = document.querySelector("#projects"),
   services = document.querySelector("#services"),
-  OBJDATA = new Data();
+  OBJDATA = new Data(),
+  HOMEIMG = document.querySelector('.home__img'),
+  HOMEDATA = document.querySelector('.home__data')
 let skill = "",
   project = "",
   service = "",
@@ -25,9 +27,11 @@ let skill = "",
   row = 0,
   column = 0,
   date = new Date(),
-  year = date.getFullYear();
+  year = date.getFullYear()
 
 document.addEventListener("DOMContentLoaded", () => {
+  HOMEIMG.setAttribute('style', 'z-index: 1')
+  HOMEDATA.setAttribute('style', 'z-index: 1')
   window.matchMedia && window.matchMedia('(prefers-color-scheme: dark)').matches ? theme.setAttribute("data-theme", "dark") : theme.setAttribute("data-theme", "light")
   dateDev.append(`2021-${year}`);
   data = OBJDATA.getData();
@@ -71,6 +75,21 @@ document.addEventListener("DOMContentLoaded", () => {
   services.innerHTML = service;
   projects.innerHTML = project;
   skills.innerHTML = skill;
+  row = [3,4,5,6,7,8,9,10,11]
+column = [1,2,3,4,5,6,7,8,9,10,11,12]
+
+  setInterval(() => {
+    data.migue.code.map(value => {
+      column = random(1,12)
+      row = random(3,11)
+      if(row > 2 && row < 12){
+        document.querySelector(`.${value.name}`).setAttribute('style', `
+          grid-column: ${column};
+          grid-row: ${row};
+        `)
+      }
+    })
+  }, 2000)
 });
 
 function toggleMenu() {
@@ -120,3 +139,5 @@ tooggleSwitch.addEventListener("click", () => {
     tooggleSwitch.classList.toggle("darkmode");
   }
 });
+
+const random = (min, max) => Math.floor(Math.random() *((max+1)-min)+1)
