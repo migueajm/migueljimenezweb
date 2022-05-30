@@ -81,16 +81,19 @@ document.addEventListener("DOMContentLoaded", () => {
     data.migue.code.map(value => {
       column = random(1,12)
       row = random(3,11)
-      if(row > 2){
-        if((row <= 5 || row > 8) && (column <= 5 || column > 11)){
-          document.querySelector(`.${value.name}`).setAttribute('style', `
-            grid-column: ${column};
-            grid-row: ${row};
-          `)
-        }
+      if((row <= 5 || row > 8) && (column <= 5 || column > 11)){
+        document.querySelector(`.${value.name}`).setAttribute('style', `
+          display: block;
+          transition: all 0.1s
+        `)
+      }else{
+        document.querySelector(`.${value.name}`).setAttribute('style', `
+          display: none;
+          transition: all 0.1s
+        `)
       }
     })
-  }, 2000)
+  }, 2500)
 });
 
 function toggleMenu() {
