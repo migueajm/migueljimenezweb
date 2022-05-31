@@ -32,9 +32,9 @@ let skill = "",
 document.addEventListener("DOMContentLoaded", () => {
   window.matchMedia && window.matchMedia('(prefers-color-scheme: dark)').matches ? theme.setAttribute("data-theme", "dark") : theme.setAttribute("data-theme", "light")
   !localStorage.getItem('userTheme') ? localStorage.setItem('userTheme', theme.getAttribute('data-theme')) : 0
-  HOMEIMG.setAttribute('style', 'z-index: 1')
+  /*HOMEIMG.setAttribute('style', 'z-index: 1')
   HOMEDATA.setAttribute('style', 'z-index: 1')
-  effect.setAttribute('style', 'z-index: 1')
+  effect.setAttribute('style', 'z-index: 1')*/
   dateDev.append(`2021-${year}`);
   data = OBJDATA.getData();
   author.append(`${data.migue.name}`);
