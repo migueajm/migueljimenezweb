@@ -159,7 +159,7 @@ class Data {
       },
       {
         name: "America",
-        image: src + "code/America.png",
+        image: src + "code/america.png",
       },
       {
         name: "VSCode",
@@ -172,9 +172,10 @@ class Data {
         alt: "WEB APP CRODE",
         src: src + "projects/appcrode.jpg",
         description:
-          "Computer asset equipment service requests<br>Web application for the administration & control of the entire IT department team",
+          "Aplicación web para la administracion de equipo y bienes informaticos.",
         date: "March-July 2021",
-        url: "Web Application Crode",
+        url: "#WebApplicationCrode",
+        code: 'Laravel, Livewire, TailwindCSS'
       },
       {
         name: "migueljimenezweb",
@@ -183,6 +184,7 @@ class Data {
         description: "Portfolio web",
         date: "July-Agust 2021",
         url: "https://migueajm.github.io/migueljimenezweb/",
+        code: 'HTML, JavaScript, CSS, SCSS'
       },
       {
         name: "Listado de precios",
@@ -191,7 +193,28 @@ class Data {
         description:
           "Listado de precios para facilitar a los usuarios la busqueda de articulos.",
         date: "January-March 2022",
-        urlt: "http://miportal.appskurigage.com/login:",
+        url: "http://miportal.appskurigage.com/login",
+        code: 'React, Symfony, JWT, Bootstrap'
+      },
+      {
+        name: "Citas de negocios(ina-paace, esm, logex)",
+        alt: "CN",
+        src: src + "projects/ina_paace.png",
+        description:
+          "Aplicación web para agendar Citas de negocios uno a uno.",
+        date: "March-June 2022",
+        url: "https://ina-paace.infoexpo.com.mx/2022/cn/ae/web/",
+        code: 'Symfony, JavaScript, JQuery, CSS, Materialize'
+      },
+      {
+        name: "Modulo CN(SAS)",
+        alt: "SAS-CN",
+        src: src + "projects/sas_cn_paace.png",
+        description:
+          "Aplicación web para la administracion y gestion de CN.",
+        date: "March-June 2022",
+        url: "https://ina-paace.infoexpo.com.mx/sas/web",
+        code: 'Symfony, JavaScript, JQuery, CSS, Materialize'
       },
     ];
     let majm = {

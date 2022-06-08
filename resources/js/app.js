@@ -32,9 +32,6 @@ let skill = "",
 document.addEventListener("DOMContentLoaded", () => {
   window.matchMedia && window.matchMedia('(prefers-color-scheme: dark)').matches ? theme.setAttribute("data-theme", "dark") : theme.setAttribute("data-theme", "light")
   !localStorage.getItem('userTheme') ? localStorage.setItem('userTheme', theme.getAttribute('data-theme')) : 0
-  /*HOMEIMG.setAttribute('style', 'z-index: 1')
-  HOMEDATA.setAttribute('style', 'z-index: 1')
-  effect.setAttribute('style', 'z-index: 1')*/
   dateDev.append(`2021-${year}`);
   data = OBJDATA.getData();
   author.append(`${data.migue.name}`);
@@ -53,17 +50,21 @@ document.addEventListener("DOMContentLoaded", () => {
   });
   data.migue.projects.map((value) => {
     project += `
-    <div class="flip-card">
+    <a href="${value.url}" class="flip-card" target="_blank">
       <div class="flip-card-inner">
         <div class="flip-card-front">
         <img src="${value.src}" alt="${value.alt}">
         </div>
         <div class="flip-card-back">
           <h3>${value.name}</h3>
-          <p>${value.description}</p>
+          <p>
+                ${value.description}
+                <br/>
+                <span><b>Construido con: </b>${value.code}</span>
+            </p>
         </div>
       </div>
-    </div>
+    </a>
     `;
   });
   data.migue.services.map((value) => {
@@ -147,3 +148,13 @@ tooggleSwitch.addEventListener("click", () => {
 });
 
 const random = (min, max) => Math.floor(Math.random() *((max+1)-min)+1)
+
+/* 
+<article class="card" style="background-image: url(${value.src})">
+        <div class="card__content">
+            <h3 class="card__title">${value.name}</h3>
+            <span class="card__subtitle">${value.alt}</span>
+            <p class="card__description">${value.description}</p>
+        </div>
+    </article>
+*/

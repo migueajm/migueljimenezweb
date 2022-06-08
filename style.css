@@ -5,16 +5,18 @@
   --main-color: #00acee;
   --text-color: #6e7787;
   --title-color: #1c1f22;
+  --title-card: #1c1f22;
   --bg-color: #ebf3ff;
   --bg-footer: #6e7787;
+  --bg-card: #fff;
 }
 
 [data-theme="dark"] {
-  --main-color: #08d665;
-  --title-color: #ffffff;
-  --text-color: #ced6de;
-  --bg-color: #041123;
-  --bg-footer: #000;
+    --main-color: #08d665;
+    --title-color: #fff;
+    --text-color: #ced6de;
+    --bg-color: #041123;
+    --bg-footer: #000;
 }
 
 /* Font size */
@@ -260,6 +262,7 @@ img {
 }
 .flip-card-back {
   background-color: var(--bg-color);
+  color: var(--text-color);
   /* padding: 2rem; */
   transform: rotateY(180deg);
 }
@@ -780,7 +783,7 @@ footer a {
     grid-template-columns: repeat(2, 1fr);
   }
 }
-.portfolio .tooltip {
+.services .div {
   width: 5rem;
   height: 5rem;
 }
@@ -791,3 +794,63 @@ footer a {
 }
 
 /*# sourceMappingURL=style.css.map */
+
+
+.card {
+    position: relative;
+    max-width: 18.75rem;
+    height: 21.875rem;
+    color: var(--title-card);
+    background-color: var(--main-color);
+    background-size: cover;
+    border-radius: .5rem;
+    overflow: hidden;
+}
+
+.card__content {
+    position: absolute;
+    left: 0;
+    bottom: 0;
+    height: 70%;
+    padding: 1rem;
+    background-color: var(--bg-card);
+    border-top-left-radius: 1.25rem;
+    transform: translateY(10.375rem);
+    transition: transform .25s;
+}
+
+.card__content:before {
+    content: '';
+    position: absolute;
+    top: -2.938rem;
+    right: -2.813rem;
+    width: 6.25rem;
+    height: 6.25rem;
+    transform: rotate(-175deg);
+    border-radius: 50%;
+    box-shadow: inset 48px 48px var(--bg-card);
+}
+
+.card__title {
+    color: var(--title-card);
+    line-height: 1.25rem;
+}
+
+.card__subtitle {
+    display: block;
+    margin-bottom: 0.625rem;
+}
+
+.card__description {
+    opacity: 0;
+    transition: opacity .5s;
+}
+
+.card:hover .card__content {
+    transform: translateY(0);
+}
+
+.card:hover .card__description {
+    opacity: 1;
+    transition:  .25s;
+}
