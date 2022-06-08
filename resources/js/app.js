@@ -4,10 +4,7 @@ const btnMenu = document.querySelector("#btnMenu"),
   header = document.querySelector(".header"),
   fadeElems = document.querySelectorAll(".has-fade"),
   dateDev = document.querySelector("#date-dev"),
-  author = document.querySelector("#author"),
   authorFooter = document.querySelector("#authorFooter"),
-  authorDescription = document.querySelector("#authorDescription"),
-  dauthorDev = document.querySelector("#authorDev"),
   effect = document.querySelector("#effect1"),
   skills = document.querySelector("#skills"),
   classSkill = document.querySelectorAll(".skill"),
@@ -17,27 +14,57 @@ const btnMenu = document.querySelector("#btnMenu"),
   tooggleSwitch = document.querySelector("#toggleSwitch"),
   projects = document.querySelector("#projects"),
   services = document.querySelector("#services"),
-  OBJDATA = new Data(),
-  HOMEIMG = document.querySelector('.home__img'),
-  HOMEDATA = document.querySelector('.home__data')
+  Nbmenu = document.querySelector('.header__links'),
+  HBmenu = document.querySelector('.header__menu'),
+  homeData = document.querySelector('.home__data'),
+  resume = document.querySelector('#resume').childNodes[1],
+  roqbyte = document.querySelector('#roqbyte'),
+  description_roqbyte = document.querySelector('#description_roqbyte'),
+  resume__info = document.querySelector('.resume__info').childNodes,
+  portfolio = document.querySelector('#portfolio').childNodes,
+  projects_services = portfolio[3].childNodes,
+  contact = document.querySelector('.contact'),
+  bye = document.querySelector('.bye'),
+  OBJDATA = new Data()
 let skill = "",
+  language =  OBJDATA.getData().migue.language,
+  lang = navigator.language.split('-'),
   project = "",
   service = "",
   data,
   row = 0,
   column = 0,
   date = new Date(),
-  year = date.getFullYear(), code
-
-document.addEventListener("DOMContentLoaded", () => {
+  year = date.getFullYear(), code,
+  nav = '', menu = ''
+  
+  document.addEventListener("DOMContentLoaded", () => {
+  language = language[lang[0]]
+  data = OBJDATA.getData();
   window.matchMedia && window.matchMedia('(prefers-color-scheme: dark)').matches ? theme.setAttribute("data-theme", "dark") : theme.setAttribute("data-theme", "light")
   !localStorage.getItem('userTheme') ? localStorage.setItem('userTheme', theme.getAttribute('data-theme')) : 0
+  language.nav.map(value => {
+      Nbmenu.innerHTML += `<li><a ${value.attribute}>${value.name}</a></li>`
+      HBmenu.innerHTML += `<a href="${value.menu}">${value.name}</a>`
+  })
+  homeData.innerHTML = `
+    <h1>${language.welcome}<br><span>${data.migue.name}</span></h1>
+    <h2>${language.description}</h2>
+    <h2 class="career">${language.dev}</h2>
+  `
+  resume.innerHTML = language.nav[1].name
+  roqbyte.innerHTML = language.community
+  description_roqbyte.innerHTML = language.communityDescription
+  resume__info[1].innerHTML = language.about
+  resume__info[3].innerHTML = language.aboutme
+  resume__info[5].innerHTML = language.cv
+  portfolio[1].innerHTML = language.nav[2].name
+  projects_services[1].innerHTML = language.project
+  projects_services[5].innerHTML = language.service
+  contact.innerHTML = language.contact
+  bye.innerHTML = language.bye
   dateDev.append(`2021-${year}`);
-  data = OBJDATA.getData();
-  author.append(`${data.migue.name}`);
   authorFooter.append(`${data.migue.name}`);
-  authorDescription.append(`${data.migue.description}`);
-  authorDev.append(`${data.migue.dev}`);
   effect.innerHTML =
     "<div></div><div></div><div></div><div></div><div></div><div></div><div></div><div></div><div></div><div></div><div></div><div></div><div></div><div></div><div></div>";
   data.migue.code.map((value) => {

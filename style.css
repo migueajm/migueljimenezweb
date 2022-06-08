@@ -91,6 +91,7 @@
 html {
   scroll-behavior: smooth;
   box-sizing: border-box;
+  min-width: 21.25rem;
 }
 
 *,
@@ -591,9 +592,16 @@ footer a {
 }
 .resume__info p {
   text-align: justify;
+  line-height: 2rem;
   margin-bottom: 0;
 }
+
 .resume__info a {
+    color: var(--text-color);
+    font-weight: bold;
+}
+
+.resume__info .btn {
   margin-top: 1rem;
   position: absolute;
   right: 15%;
@@ -853,4 +861,12 @@ footer a {
 .card:hover .card__description {
     opacity: 1;
     transition:  .25s;
+}
+
+#roqbyte {
+    padding: 0;
+}
+
+#description_roqbyte {
+    text-align: justify;
 }

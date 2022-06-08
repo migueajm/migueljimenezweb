@@ -5,10 +5,10 @@
   <meta charset="UTF-8">
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Miguel Angel Jimenez | Portfolio</title>
-  <meta name="description" content="Welcome, Portfolio of MAJM97">
+  <title>@MigueAJM | migueljimenezweb</title>
+  <meta name="description" content="Welcome, Portfolio of @MigueAJM">
   <meta name="keywords"
-    content="web, developer, projects, services, skills, miguel, jimenez, angel, javascript, laravel, php, disign">
+    content="web, developer, projects, services, skills, miguel, jimenez, angel, javascript, laravel, php, disign, symfony, react, JWT, @MigueAJM">
   <meta name="author" content="Miguel Angel Jimenez">
   <link rel="stylesheet" href="style.css">
 </head>
@@ -19,13 +19,7 @@
     <nav class="grid grid-pi-c">
       <a class="header__logo" href="#">{@MigueAJM}</a>
       <a id="btnMenu" class="header__toggle hide-for-desktop"><span></span><span></span><span></span></a>
-      <ul class="header__links flex hide-for-mobile">
-        <li><a class="active" href="#home">Home</a></li>
-        <li><a href="#resume">Resume</a></li>
-        <li><a href="#portfolio">Portfolio</a></li>
-        <li><a href="https://migueajm.github.io/MigueAJM97/" target="_blank">Blog</a></li>
-        <!-- <li><a href="#blog">Blog</a></li> -->
-      </ul>
+      <ul class="header__links flex hide-for-mobile"></ul>
       <div class="header__social">
         <a href="https://github.com/MigueAJM"><span class="iconify" data-icon="akar-icons:github-fill"></span></a>
         <a href="https://twitter.com/MigueAJM"><span class="iconify" data-icon="akar-icons:twitter-fill"></span></a>
@@ -34,12 +28,7 @@
         <a id="toggleSwitch" class="tooltip"><span class="iconify" data-icon="wi:solar-eclipse"></span></a>
       </div>
     </nav>
-    <div class="header__menu has-fade">
-      <a href="#home">Home</a>
-      <a href="#resume">Resume</a>
-      <a href="#portfolio">Portfolio</a>
-      <a href="https://migueajm.github.io/MigueAJM97/" target="_blank">Blog</a>
-    </div>
+    <div class="header__menu has-fade"></div>
   </header>
 
   <div id="effect1" class="effect effect-1"></div>
@@ -49,64 +38,49 @@
       <div class="home__img grid grid-pi-c">
         <img src="resources/img/profile-picture.jpg" alt="@MigueAJM">
       </div>
-      <div class="home__data">
-        <h1>Welcome, I'm<br><span id="author"></span></h1>
-        <h2 id="authorDescription"></h2>
-        <h2 id="authorDev" class="career"></h2>
-      </div>
+      <div class="home__data"></div>
     </div>
   </section>
 
   <section class="resume section" id="resume">
-    <h2 class="section__title">Resume</h2>
+    <h2 class="section__title"></h2>
     <div class="container">
       <div class="resume__data grid grid-pi-c">
         <div class="resume__img">
           <div>
-            <h2>RoqByte Community</h2>
-            <p>
-              We are a student community works for students who want to expand and replicate their knowledge to
-              create a collaborative learning chain.
-            </p>
+            <h2 id="roqbyte"></h2>
+            <p id="description_roqbyte"></p>
           </div>
           <img src="resources/img/roqbyte-pic.jpg" alt="RoqByte">
         </div>
         <div class="resume__info">
-          <h3>About me:</h3>
-          <p>
-            I'm a ICT Engineer, graduated from the Technological Institute of ROQUE.
-            I'm currently specializing in web development, I have worked for 6 months in CRODE-CELAYA in the
-            development and maintenance of modules of web application.
-            I'm currently working on a personal blog to have my space for the thigns that I learn over time.
-            In my free time I usually practice sports with my friends.
-            I love soccer &#128147;.
-          </p>
+          <h3></h3>
+          <p></p>
           <a href="resources/doc/CV_ING-TECNOLOGIAS-INFORMACIÓN-COMUNICACIONES_MIGUEL-ANGEL-JIMENEZ.pdf"
-           class="button"
+           class="button btn"
             target="_blank">
-            Download CV
           </a>
         </div>
       </div>
     </div>
   </section>
   <section class="portfolio section" id="portfolio">
-    <h2 class="section__title">Portfolio</h2>
+    <h2 class="section__title"></h2>
     <div class="container">
-      <h3>Projects</h3>
+      <h3></h3>
       <div id="projects" class="portfolio__projects grid grid-pi-c"></div>
-      <h3>Services</h3>
+      <h3></h3>
       <div id="services" class="portfolio__services grid grid-pi-c"></div>
     </div>
   </section>
   <footer>
     <div>
-      Contact me:<br>
+      <span class="contact"></span> @MigueAJM<br>
       <a href="https://twitter.com/MigueAJM"><span class="iconify tooltiptext"
           data-icon="akar-icons:twitter-fill">@MigueAJM</span>
       </a>
     </div>
-    <p>&copy; <label id="date-dev"></label> Developed with &#128147; By: <span id="authorFooter"><span></p>
+    <p>&copy; <label id="date-dev"></label> <span class="bye"></span><span id="authorFooter"><span></p>
   </footer>
   <script src="https://code.iconify.design/2/2.0.3/iconify.min.js"></script>
   <script src="resources/js/Data.js"></script>
