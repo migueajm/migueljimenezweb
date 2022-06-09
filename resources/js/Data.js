@@ -248,7 +248,7 @@ class Data {
             community: 'Comunidad RoqByte',
             communityDescription: 'Somos una comunidad estudiantil que trabaja para estudiantes que quieren ampliar y replicar sus conocimientos para crear una cadena de aprendizaje colaborativo',
             about: 'Sobre mi:',
-            aboutme: 'Soy Ing. en TIC`s, graduado del TecNM Campus Roque. Me estoy especializando en el desarrollo web tanto en el FRONT-END como en el BACK-END. Actualmente me encuentro labaorando en <a href="https://www.infoexpo.com.mx/home/" target="_blank">Infoexpo</a> en el área de desarrollo, trabajando sobre proyectos web construidos en Symfony, JavaScript, JQuery, Materialize, etc. Tambien me encuentro trabajando en un blog personal para documentar todo que he aprendido y me queda por aprender, en mi tiempo libre suelo practicar futbol ❤️',
+            aboutme: 'Soy Ing. en TIC`s, graduado del TecNM Campus Roque. Me estoy especializando en el desarrollo web tanto en el FRONT-END como en el BACK-END. Actualmente me encuentro laborando en <a href="https://www.infoexpo.com.mx/home/" target="_blank">Infoexpo</a> en el área de desarrollo, trabajando sobre proyectos web construidos en Symfony, JavaScript, JQuery, Materialize, etc. Tambien me encuentro trabajando en un blog personal para documentar todo lo que he aprendido y me queda por aprender, en mi tiempo libre suelo practicar futbol ❤️',
             cv: 'Descargar CV',
             project: 'Proyectos',
             service: 'Servicios',
