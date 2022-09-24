@@ -205,7 +205,7 @@ class Data {
         date: "March-June 2022",
         url: "https://ina-paace.infoexpo.com.mx/2022/cn/ae/web/",
         code: 'Symfony, JavaScript, JQuery, CSS, Materialize'
-      },
+      }/*,
       {
         name: "Modulo CN(SAS)",
         alt: "SAS-CN",
@@ -215,7 +215,7 @@ class Data {
         date: "March-June 2022",
         url: "https://ina-paace.infoexpo.com.mx/sas/web",
         code: 'Symfony, JavaScript, JQuery, CSS, Materialize'
-      },
+      },*/
     ];
 
     const language = {
