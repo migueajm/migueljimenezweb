@@ -188,12 +188,3 @@ const setTheme = (theme, tooggleSwitch, mode) => {
   tooggleSwitch.classList.toggle("darkmode");
   localStorage.setItem("theme", theme.getAttribute("data-theme"));
 };
-/* 
-<article class="card" style="background-image: url(${value.src})">
-        <div class="card__content">
-            <h3 class="card__title">${value.name}</h3>
-            <span class="card__subtitle">${value.alt}</span>
-            <p class="card__description">${value.description}</p>
-        </div>
-    </article>
-*/
