@@ -195,7 +195,7 @@ class Data {
         date: "January-March 2022",
         url: "http://miportal.appskurigage.com/login",
         code: 'React, Symfony, JWT, Bootstrap'
-      },
+      }/*,
       {
         name: "Citas de negocios(ina-paace, esm, logex)",
         alt: "CN",
@@ -205,7 +205,7 @@ class Data {
         date: "March-June 2022",
         url: "https://ina-paace.infoexpo.com.mx/2022/cn/ae/web/",
         code: 'Symfony, JavaScript, JQuery, CSS, Materialize'
-      }/*,
+      },
       {
         name: "Modulo CN(SAS)",
         alt: "SAS-CN",
