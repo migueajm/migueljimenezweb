@@ -237,9 +237,9 @@ class Data {
                    menu: '#portfolio'
                },
                {
-                   name: 'Blog',
-                   attribute: 'href="https://migueajm.github.io/MigueAJM97/" target="_blank"',
-                   menu: 'https://migueajm.github.io/MigueAJM97/'
+                   name: 'Notes',
+                   attribute: 'href="https://migueajm.github.io/my-notes/" target="_blank"',
+                   menu: 'https://migueajm.github.io/my-notes/'
                },
             ],
             welcome: 'Bienvenido, Soy',
