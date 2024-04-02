@@ -166,57 +166,7 @@ class Data {
         image: src + "code/vscode.png",
       },
     ];
-    let projects = [
-      {
-        name: "Solicitudes de servico de equipo de bienes informaticos",
-        alt: "WEB APP CRODE",
-        src: src + "projects/appcrode.jpg",
-        description:
-          "Aplicación web para la administracion de equipo y bienes informaticos.",
-        date: "March-July 2021",
-        url: "#WebApplicationCrode",
-        code: 'Laravel, Livewire, TailwindCSS'
-      },
-      {
-        name: "migueljimenezweb",
-        alt: "PORTFOLIO",
-        src: src + "projects/majm97.png",
-        description: "Portfolio web",
-        date: "July-Agust 2021",
-        url: "https://migueajm.github.io/migueljimenezweb/",
-        code: 'HTML, JavaScript, CSS, SCSS'
-      },
-      {
-        name: "Listado de precios",
-        alt: "MI PORTAL",
-        src: src + "projects/portal.png",
-        description:
-          "Listado de precios para facilitar a los usuarios la busqueda de articulos.",
-        date: "January-March 2022",
-        url: "http://miportal.appskurigage.com/login",
-        code: 'React, Symfony, JWT, Bootstrap'
-      }/*,
-      {
-        name: "Citas de negocios(ina-paace, esm, logex)",
-        alt: "CN",
-        src: src + "projects/ina_paace.png",
-        description:
-          "Aplicación web para agendar Citas de negocios uno a uno.",
-        date: "March-June 2022",
-        url: "https://ina-paace.infoexpo.com.mx/2022/cn/ae/web/",
-        code: 'Symfony, JavaScript, JQuery, CSS, Materialize'
-      },
-      {
-        name: "Modulo CN(SAS)",
-        alt: "SAS-CN",
-        src: src + "projects/sas_cn_paace.png",
-        description:
-          "Aplicación web para la administracion y gestion de CN.",
-        date: "March-June 2022",
-        url: "https://ina-paace.infoexpo.com.mx/sas/web",
-        code: 'Symfony, JavaScript, JQuery, CSS, Materialize'
-      },*/
-    ];
+    let projects = [];
 
     const language = {
         es: {
@@ -248,7 +198,7 @@ class Data {
             community: 'Comunidad RoqByte',
             communityDescription: 'Somos una comunidad estudiantil que trabaja para estudiantes que quieren ampliar y replicar sus conocimientos para crear una cadena de aprendizaje colaborativo',
             about: 'Sobre mi:',
-            aboutme: 'Soy Ing. en TIC`s, graduado del TecNM Campus Roque. Me estoy especializando en el desarrollo web tanto en el FRONT-END como en el BACK-END. Actualmente me encuentro laborando en <a href="https://www.infoexpo.com.mx/home/" target="_blank">Infoexpo</a> en el área de desarrollo, trabajando sobre proyectos web construidos en Symfony, JavaScript, JQuery, Materialize, NodeJS, ExpressJS, ReactJS, PostgreSQL, etc. Tambien me encuentro trabajando en un blog personal para documentar todo lo que he aprendido y me queda por aprender, en mi tiempo libre suelo practicar futbol ❤️',
+            aboutme: 'Soy Ing. en TIC`s, graduado del TecNM Campus Roque. Me estoy especializando en el desarrollo web tanto en el FRONT-END como en el BACK-END. Actualmente me encuentro laborando en <a href="https://www.infoexpo.com.mx/home/" target="_blank">Infoexpo</a> en el área de desarrollo, trabajando sobre proyectos web construidos con Symfony, Flutter, Angular, JavaScript, JQuery, Materialize, NodeJS, ExpressJS, ReactJS, PostgreSQL, etc. Tambien me encuentro trabajando en un blog personal para documentar todo lo que he aprendido y me queda por aprender, en mi tiempo libre suelo practicar futbol ❤️',
             cv: 'Descargar CV',
             project: 'Proyectos',
             service: 'Servicios',
