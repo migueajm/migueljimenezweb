@@ -91,25 +91,6 @@ document.addEventListener("DOMContentLoaded", () => {
         </div>
         `;
   });
-  data.migue.projects.map((value) => {
-    project += `
-        <a href="${value.url}" class="flip-card" target="_blank">
-        <div class="flip-card-inner">
-            <div class="flip-card-front">
-            <img src="${value.src}" alt="${value.alt}">
-            </div>
-            <div class="flip-card-back">
-            <h3>${value.name}</h3>
-            <p>
-                    ${value.description}
-                    <br/>
-                    <span><b>Construido con: </b>${value.code}</span>
-                </p>
-            </div>
-        </div>
-        </a>
-        `;
-  });
   data.migue.services.map((value) => {
     service += `
         <div class="glassmorphism tooltip">
