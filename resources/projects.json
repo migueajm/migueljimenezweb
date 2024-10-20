@@ -1,0 +1,57 @@
+{
+	"data": [
+		{
+			"name": "InfoLead",
+			"type": "Mobile application",
+			"video": "https://www.youtube.com/watch?v=EeTu9iTn5z0",
+			"src": "resources/img/projects/infolead.png",
+			"createdAt":"2024-05-09",
+			"store": {
+				"android": "https://play.google.com/store/apps/details?id=com.infoexpo.scanner.infolead&hl=en&pli=1",
+				"ios": "https://apps.apple.com/mx/app/info-lead/id6502916007"
+			},
+			"description": {
+				"es": "Infolead es una aplicación móvil diseñada para mejorar la experiencia de networking en eventos y exposiciones. Con Infolead, los usuarios pueden escanear credenciales(Badge QR) y recopilar fácilmente la información de contacto de los asistentes, expositores y proveedores durante el evento. La app permite gestionar leads en tiempo real, con opciones para añadir notas, clasificar contactos y generar reportes detallados. Además, facilita el seguimiento posterior mediante la integración con sistemas CRM, ayudando a optimizar el proceso de conversión de leads en oportunidades de negocio. Infolead es una herramienta clave para maximizar el aprovechamiento de eventos profesionales y ferias comerciales.",
+				"en": "Infolead is a mobile application designed to enhance the networking experience at events and exhibitions. With Infolead, users can scan badges (Badge QR) and easily collect contact information from attendees, exhibitors, and suppliers during the event. The app allows users to manage leads in real-time, with options to add notes, categorize contacts, and generate detailed reports. Additionally, it facilitates post-event follow-up through CRM integration, helping to optimize the process of converting leads into business opportunities. Infolead is a key tool for maximizing the value of professional events and trade shows."
+			},
+			"skill": [
+				{
+					"name": "Flutter",
+					"src": "flutter.png"
+				},
+				{
+					"name": "Dart",
+					"src": "dart.png"
+				},
+				{
+					"name": "Symfony",
+					"src": "symfony.png"
+				},
+				{
+					"name": "PHP",
+					"src": "php.png"
+				},
+				{
+					"name": "PostgreSql",
+					"src": "pgsql.png"
+				},
+				{
+					"name": "JWT",
+					"src": "jwt.png"
+				},
+				{
+					"name": "Android",
+					"src": "android.png"
+				},
+				{
+					"name": "IOS",
+					"src": "ios.png"
+				},
+				{
+					"name": "Git",
+					"src": "git.png"
+				}
+			]
+		}
+	]
+}

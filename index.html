@@ -6,7 +6,7 @@
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>@MigueAJM | migueljimenezweb</title>
-  <link rel="shortcut icon" href="favicon.ico" type="image/x-icon">
+  <link rel="shortcut icon" href="resources/migueajm.ico" type="image/x-icon">
   <meta name="description" content="Welcome, Portfolio of @MigueAJM">
   <meta name="keywords"
     content="web, developer, projects, services, skills, miguel, jimenez, angel, javascript, laravel, php, disign, symfony, react, JWT, @MigueAJM">
@@ -15,76 +15,79 @@
 <script src="resources/js/Data.js"></script>
 <script src="resources/js/app.js"></script>
 </head>
-
 <body>
-  <header class="header">
-    <div class="overlay has-fade"></div>
-    <nav class="grid grid-pi-c">
-      <a class="header__logo" href="#">{@MigueAJM}</a>
-      <a id="btnMenu" class="header__toggle hide-for-desktop"><span></span><span></span><span></span></a>
-      <ul class="header__links flex hide-for-mobile"></ul>
-      <div class="header__social">
-        <a href="https://github.com/MigueAJM"><span class="iconify" data-icon="akar-icons:github-fill"></span></a>
-        <a href="https://twitter.com/MigueAJM"><span class="iconify" data-icon="akar-icons:twitter-fill"></span></a>
-        <a href="https://www.linkedin.com/in/migueajm/"><span class="iconify" data-icon="akar-icons:linkedin-fill"></span></a>
-        <a id="toggleSwitch" class="tooltip"><span class="iconify" data-icon="wi:solar-eclipse"></span></a>
+  <div class="loader-container">
+    <div class="loader"></div>
+  </div>
+  <main class="hide">
+    <header class="header">
+      <div class="overlay has-fade"></div>
+      <nav class="grid grid-pi-c">
+        <a class="header__logo" href="#">{@MigueAJM}</a>
+        <a id="btnMenu" class="header__toggle hide-for-desktop"><span></span><span></span><span></span></a>
+        <ul class="header__links flex hide-for-mobile"></ul>
+        <div class="header__social">
+          <a id="toggleSwitch" class="tooltip"><span class="iconify" data-icon="wi:solar-eclipse"></span></a>
+          <a href="https://github.com/MigueAJM"><span class="iconify" data-icon="akar-icons:github-fill"></span></a>
+          <a href="https://twitter.com/MigueAJM"><span class="iconify" data-icon="akar-icons:twitter-fill"></span></a>
+          <a href="https://www.linkedin.com/in/migueajm/"><span class="iconify" data-icon="akar-icons:linkedin-fill"></span></a>
+        </div>
+      </nav>
+      <div class="header__menu has-fade"></div>
+    </header>
+    <div id="effect1" class="effect effect-1"></div>
+    <section id="home" class="home section">
+      <div id="skills" class="grid-pi-c"></div>
+      <div class="container grid grid-pi-c">
+        <div class="home__img grid grid-pi-c">
+          <img src="resources/img/profile-picture.jpg" alt="@MigueAJM">
+        </div>
+        <div class="home__data"></div>
       </div>
-    </nav>
-    <div class="header__menu has-fade"></div>
-  </header>
-
-  <div id="effect1" class="effect effect-1"></div>
-  <section id="home" class="home section">
-    <div id="skills" class="grid-pi-c"></div>
-    <div class="container grid grid-pi-c">
-      <div class="home__img grid grid-pi-c">
-        <img src="resources/img/profile-picture.jpg" alt="@MigueAJM">
+    </section>
+    <section class="portfolio section" id="portfolio">
+      <h2 class="section__title"></h2>
+      <div class="container">
+        <h3></h3>
+        <div id="projects" class="portfolio__projects grid grid-pi-c"></div>
+        <h3></h3>
+        <div id="services" class="portfolio__services grid grid-pi-c"></div>
       </div>
-      <div class="home__data"></div>
-    </div>
-  </section>
-
-  <section class="resume section" id="resume">
-    <h2 class="section__title"></h2>
-    <div class="container">
-      <div class="resume__data grid grid-pi-c">
-        <div class="resume__img">
-          <div>
-            <h2 id="roqbyte"></h2>
-            <p id="description_roqbyte"></p>
+    </section>
+    <section class="resume section" id="resume">
+      <h2 class="section__title"></h2>
+      <div class="container">
+        <div class="resume__data grid grid-pi-c">
+          <div class="resume__img">
+            <div>
+              <h2 id="roqbyte"></h2>
+              <p id="description_roqbyte"></p>
+            </div>
+            <img src="resources/img/roqbyte-pic.jpg" alt="RoqByte">
           </div>
-          <img src="resources/img/roqbyte-pic.jpg" alt="RoqByte">
-        </div>
-        <div class="resume__info">
-          <h3></h3>
-          <p></p>
-          <a href="resources/doc/CV_ING-TECNOLOGIAS-INFORMACIÓN-COMUNICACIONES_MIGUEL-ANGEL-JIMENEZ.pdf"
-           class="button btn"
-            target="_blank">
-          </a>
+          <div class="resume__info">
+            <h3></h3>
+            <p></p>
+            <a href="resources/doc/CV_ING-TECNOLOGIAS-INFORMACIÓN-COMUNICACIONES_MIGUEL-ANGEL-JIMENEZ.pdf"
+            class="button btn"
+              target="_blank">
+            </a>
+          </div>
         </div>
       </div>
-    </div>
-  </section>
-  <section class="portfolio section" id="portfolio">
-    <h2 class="section__title"></h2>
-    <div class="container">
-      <h3></h3>
-      <div id="projects" class="portfolio__projects grid grid-pi-c"></div>
-      <h3></h3>
-      <div id="services" class="portfolio__services grid grid-pi-c"></div>
-    </div>
-  </section>
-  <footer>
-    <div>
-      <span class="contact"></span> @MigueAJM<br>
-      <a href="https://twitter.com/MigueAJM"><span class="iconify tooltiptext"
-          data-icon="akar-icons:twitter-fill">@MigueAJM</span>
-      </a>
-    </div>
-    <p>&copy; <label id="date-dev"></label> <span class="bye"></span><span id="authorFooter"><span></p>
-  </footer>
+    </section>
+    <hr>
+    <footer style="position: relative">
+      <div>
+        <span class="contact"></span> <span style="color: var(--main-color)">@MigueAJM</span><br>
+        <a href="https://twitter.com/MigueAJM"><span class="iconify tooltiptext"
+            data-icon="akar-icons:twitter-fill" style="color: var(--main-color)">@MigueAJM</span>
+        </a>
+      </div>
+      <p>&copy; <label id="date-dev"></label> <span class="bye"></span><span id="authorFooter" style="color: var(--main-color)"><span></p>
+      <span style="position: absolute;bottom: 3.25rem;font-size: 0.75rem;left: 1rem;">v1.1.0</span>
+    </footer>
+  </main>
   <script src="https://code.iconify.design/2/2.0.3/iconify.min.js"></script>
 </body>
-
 </html>

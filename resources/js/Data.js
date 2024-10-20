@@ -169,90 +169,91 @@ class Data {
     let projects = [];
 
     const language = {
-        es: {
-            nav: [
-               {
-                   name: 'Principal',
-                   attribute: 'class="active" href="#home"',
-                   menu: '#home'
-               },
-               {
-                   name: 'Resumen',
-                   attribute: ' href="#resume"',
-                   menu: '#resume'
-               },
-               {
-                   name: 'Portafolio',
-                   attribute: 'href="#portfolio"',
-                   menu: '#portfolio'
-               },
-               {
-                   name: 'Notes',
-                   attribute: 'href="https://migueajm.github.io/my-notes/" target="_blank"',
-                   menu: 'https://migueajm.github.io/my-notes/'
-               },
-            ],
-            welcome: 'Bienvenido, Soy',
-            description: 'Ingeniero en Tecnologías de la Información y Comunicaciones',
-            dev: 'Desarrollador web',
-            community: 'Comunidad RoqByte',
-            communityDescription: 'Somos una comunidad estudiantil que trabaja para estudiantes que quieren ampliar y replicar sus conocimientos para crear una cadena de aprendizaje colaborativo',
-            about: 'Sobre mi:',
-            aboutme: 'Soy Ing. en TIC`s, graduado del TecNM Campus Roque. Me estoy especializando en el desarrollo web tanto en el FRONT-END como en el BACK-END. Actualmente me encuentro laborando en <a href="https://www.infoexpo.com.mx/home/" target="_blank">Infoexpo</a> en el área de desarrollo, trabajando sobre proyectos web construidos con Symfony, Flutter, Angular, JavaScript, JQuery, Materialize, NodeJS, ExpressJS, ReactJS, PostgreSQL, etc. Tambien me encuentro trabajando en un blog personal para documentar todo lo que he aprendido y me queda por aprender, en mi tiempo libre suelo practicar futbol ❤️',
-            cv: 'Descargar CV',
-            project: 'Proyectos',
-            service: 'Servicios',
-            contact: 'Contacto',
-            bye: 'Desarrollado con ❤️ BY: '
-        },
-        en: {
-            nav: [
-               {
-                   name: 'Home',
-                   attribute: 'class="active" href="#home"',
-                   menu: '#home'
-               },
-               {
-                   name: 'Resume',
-                   attribute: ' href="#resume"',
-                   menu: '#resume'
-               },
-               {
-                   name: 'Portfolio',
-                   attribute: 'href="#portfolio"',
-                   menu: '#portfolio'
-               },
-               {
-                   name: 'Blog',
-                   attribute: 'href="https://migueajm.github.io/MigueAJM97/" target="_blank"',
-                   menu: 'https://migueajm.github.io/MigueAJM97/'
-               },
-            ],
-            welcome: "Welcome, I'm",
-            description: 'Information and Communications Technologies Engineer',
-            dev: 'Web Developer',
-            community: 'RoqByte Community',
-            communityDescription: ' We are a student community works for students who want to expand and replicate their knowledge to create a collaborative learning chain.',
-            about: 'About me:',
-            aboutme: 'I am an ICT Engineer, graduated from TecNM Campus Roque. I am currently specializing in web development both in the FRONT-END and in the BACK-END, I am currently working at <a href="https://www.infoexpo.com.mx/home/" target="_blank ">Infoexpo</a> in the development area, working on web projects built in Symfony, JavaScript, JQuery, Materialize, NodeJS, ExpressJS, ReactJS, PostgreSQL, etc. I am also working on a personal blog to document everything I have learned and still have to learn, in my free time I usually practice soccer ❤️',
-            cv: 'Download CV',
-            project: 'Projects',
-            service: 'Services',
-            contact: 'Contact me',
-            bye: 'Developed with ❤️, By:'
-        }
+      es: {
+        nav: [
+          {
+            name: 'Principal',
+            attribute: 'class="active" href="#home"',
+            menu: '#home'
+          },
+          {
+            name: 'Portafolio',
+            attribute: 'href="#portfolio"',
+            menu: '#portfolio'
+          },
+          {
+            name: 'Resumen',
+            attribute: ' href="#resume"',
+            menu: '#resume'
+          },
+          {
+            name: 'Notes',
+            attribute: 'href="https://migueajm.github.io/my-notes/" target="_blank"',
+            menu: 'https://migueajm.github.io/my-notes/'
+          },
+        ],
+        welcome: 'Bienvenido, Soy',
+        description: 'Ingeniero en Tecnologías de la Información y Comunicaciones',
+        dev: 'Desarrollador de software',
+        community: 'Comunidad RoqByte',
+        communityDescription: 'Comunidad estudiantil que trabaja para estudiantes que quieren ampliar y replicar sus conocimientos para crear una cadena de aprendizaje colaborativo',
+        about: 'Sobre mi:',
+        aboutme: 'Soy Ingeniero en Tecnologías de la Información y Comunicación, egresado del TecNM Campus Roque. Me especializo en el desarrollo de software, participando activamente en proyectos tecnológicos de alto impacto. Actualmente, me desempeño en <a href="https://www.infoexpo.com.mx/home/" target="_blank">Infoexpo</a> en el área de desarrollo, contribuyendo a la creación de soluciones innovadoras que optimizan tanto la experiencia del usuario como los procesos internos. Cuento con sólida experiencia en trabajo en equipo, colaborando de manera eficiente con distintos departamentos para alcanzar objetivos comunes. Estoy comprometido con la mejora continua y la adopción de buenas prácticas que aseguren calidad y escalabilidad en cada proyecto.',
+        cv: 'Descargar CV',
+        project: 'Proyectos',
+        service: 'Servicios',
+        contact: 'Contacto',
+        bye: 'Desarrollado con ❤️ BY: '
+      },
+      en: {
+        nav: [
+          {
+            name: 'Home',
+            attribute: 'class="active" href="#home"',
+            menu: '#home'
+          },
+          {
+            name: 'Portfolio',
+            attribute: 'href="#portfolio"',
+            menu: '#portfolio'
+          },
+          {
+            name: 'Resume',
+            attribute: ' href="#resume"',
+            menu: '#resume'
+          },
+          {
+            name: 'Blog',
+            attribute: 'href="https://migueajm.github.io/MigueAJM97/" target="_blank"',
+            menu: 'https://migueajm.github.io/MigueAJM97/'
+          },
+        ],
+        welcome: "Welcome, I'm",
+        description: 'Information and Communications Technologies Engineer',
+        dev: 'Software Developer',
+        community: 'RoqByte Community',
+        communityDescription: 'Student community works for students who want to expand and replicate their knowledge to create a collaborative learning chain.',
+        about: 'About me:',
+        aboutme: 'I am a Telecommunications and Information Technology Engineer, graduated from TecNM Campus Roque. I specialize in software development, actively participating in high-impact technology projects. Currently, I work at <a href="https://www.infoexpo.com.mx/home/" target="_blank">Infoexpo</a> in the development area, contributing to the creation of innovative solutions that optimize both user experience and internal processes. I have solid experience working in teams, collaborating efficiently with different departments to achieve common goals. I am committed to continuous improvement and the adoption of best practices to ensure quality and scalability in every project.',
+        cv: 'Download CV',
+        project: 'Projects',
+        service: 'Services',
+        contact: 'Contact me',
+        bye: 'Developed with ❤️, By:'
+      }
     }
     let majm = {
       migue: {
         name: "Miguel Angel Jimenez",
         description: "Information and Communications Technologies Engineer",
-        dev: "Web Developer",
-        title: "@MigueAJM | migueljimenezweb",
+        dev: "Software Developer",
+        title: "@MigueAJM",
         code,
         projects,
         services,
         menu,
-        language
+        language,
+        version: "v1.0.0"
       },
     };
     return majm;

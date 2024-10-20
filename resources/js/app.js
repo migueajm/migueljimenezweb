@@ -1,4 +1,22 @@
-document.addEventListener("DOMContentLoaded", () => {
+const loader = {
+  show: () => {
+    document.querySelector('main').classList.add('hide');
+    document.querySelector('.loader-container').classList.remove('hide');
+  },
+  hide: () => {
+    document.querySelector('main').classList.remove('hide');
+    document.querySelector('.loader-container').classList.add('hide');
+  }
+}
+
+const random = (min, max) => Math.floor(Math.random() * (max + 1 - min) + 1);
+
+const setTheme = (theme, tooggleSwitch, mode) => {
+  theme.setAttribute("data-theme", mode);
+  tooggleSwitch.classList.toggle("darkmode");
+  localStorage.setItem("theme", theme.getAttribute("data-theme"));
+};
+document.addEventListener("DOMContentLoaded", async () => {
   const btnMenu = document.querySelector("#btnMenu"),
     body = document.querySelector("body"),
     header = document.querySelector(".header"),
@@ -56,7 +74,6 @@ document.addEventListener("DOMContentLoaded", () => {
   const links = document.querySelectorAll(".header__links li a");
   links.forEach((link) => {
     link.addEventListener("click", (action) => {
-      /* console.log(action.target); */
       links.forEach((link) => link.classList.remove("active"));
       action.target.classList.add("active");
     });
@@ -68,21 +85,24 @@ document.addEventListener("DOMContentLoaded", () => {
         <h2>${language.description}</h2>
         <h2 class="career">${language.dev}</h2>
     `;
-  resume.innerHTML = language.nav[1].name;
+  resume.innerHTML = language.nav[2].name;
   roqbyte.innerHTML = language.community;
   description_roqbyte.innerHTML = language.communityDescription;
   resume__info[1].innerHTML = language.about;
   resume__info[3].innerHTML = language.aboutme;
   resume__info[5].innerHTML = language.cv;
-  portfolio[1].innerHTML = language.nav[2].name;
+  portfolio[1].innerHTML = language.nav[1].name;
   projects_services[1].innerHTML = language.project;
   projects_services[5].innerHTML = language.service;
   contact.innerHTML = language.contact;
   bye.innerHTML = language.bye;
   dateDev.append(`2021-${year}`);
   authorFooter.append(`${data.migue.name}`);
-  effect.innerHTML =
-    "<div></div><div></div><div></div><div></div><div></div><div></div><div></div><div></div><div></div><div></div><div></div><div></div><div></div><div></div><div></div>";
+  let divs = "";
+  for (let index = 0; index < 15; index++) {
+    divs += "<div></div>";
+  }
+  effect.innerHTML = divs;
   data.migue.code.map((value) => {
     skill += `
         <div class="skill ${value.name} glassmorphism tooltip ">
@@ -101,30 +121,7 @@ document.addEventListener("DOMContentLoaded", () => {
   });
   services.innerHTML = service;
   projects.innerHTML = project;
-  skills.innerHTML = skill;
-  setInterval(() => {
-    data.migue.code.map((value) => {
-      column = random(1, 12);
-      row = random(3, 11);
-      if ((row <= 5 || row > 8) && (column <= 5 || column > 11)) {
-        document.querySelector(`.${value.name}`).setAttribute(
-          "style",
-          `
-            display: block;
-            transition: all 0.1s
-            `
-        );
-      } else {
-        document.querySelector(`.${value.name}`).setAttribute(
-          "style",
-          `
-            display: none;
-            transition: all 0.1s
-            `
-        );
-      }
-    });
-  }, 2500);
+  //skills.innerHTML = skill;
   btnMenu.addEventListener("click", () => {
     toggleMenu();
   });
@@ -143,29 +140,63 @@ document.addEventListener("DOMContentLoaded", () => {
 
   function toggleMenu() {
     if (header.classList.contains("open")) {
-      // Close Hamburger Menu
       body.classList.remove("noscroll");
       header.classList.remove("open");
       fadeElems.forEach((element) => {
         element.classList.remove("fade-in");
         element.classList.add("fade-out");
       });
-    } else {
-      // Open Hamburger Menu
-      body.classList.add("noscroll");
-      header.classList.add("open");
-      fadeElems.forEach((element) => {
-        element.classList.remove("fade-out");
-        element.classList.add("fade-in");
-      });
+      return;
     }
+    body.classList.add("noscroll");
+    header.classList.add("open");
+    fadeElems.forEach((element) => {
+      element.classList.remove("fade-out");
+      element.classList.add("fade-in");
+    });
   }
+
+  const createCard = (imageUrl, title, description, date) => {
+    const card = document.createElement('div');
+    card.className = 'card';
+
+    const img = document.createElement('img');
+    img.src = imageUrl;
+    img.alt = title;
+
+    const cardTitle = document.createElement('div');
+    cardTitle.className = 'card-title';
+    cardTitle.textContent = title;
+
+    const cardDescription = document.createElement('div');
+    cardDescription.className = 'card-description';
+    cardDescription.textContent = description;
+
+    const cardFooter = document.createElement('div');
+    cardFooter.className = 'card-footer';
+    cardFooter.textContent = `${lang[0] == 'es' ? 'Fecha' : 'Date'}: ${date}`;
+
+    card.appendChild(img);
+    card.appendChild(cardTitle);
+    card.appendChild(cardDescription);
+    card.appendChild(cardFooter);
+    return card;
+  };
+  const res = await fetch("resources/projects.json", { mode: 'no-cors' });
+  if (!res.ok) return console.error("Not found");
+  const projectsData = await res.json();
+  projectsData.data.forEach(project => {
+    const card = createCard(
+      project.src,
+      project.name,
+      project.description[lang[0]].length >= 70
+        ? project.description[lang[0]].substring(0, 69) + '...'
+        : project.description[lang[0]],
+      project.createdAt
+    );
+    projects.appendChild(card);
+  })
+  setTimeout(() => {
+    loader.hide();
+  }, 1200);
 });
-
-const random = (min, max) => Math.floor(Math.random() * (max + 1 - min) + 1);
-
-const setTheme = (theme, tooggleSwitch, mode) => {
-  theme.setAttribute("data-theme", mode);
-  tooggleSwitch.classList.toggle("darkmode");
-  localStorage.setItem("theme", theme.getAttribute("data-theme"));
-};
