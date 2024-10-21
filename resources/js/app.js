@@ -12,6 +12,13 @@ const loader = {
 const random = (min, max) => Math.floor(Math.random() * (max + 1 - min) + 1);
 
 const setTheme = (theme, tooggleSwitch, mode) => {
+  if(mode == 'dark'){
+    document.querySelector('#sun').classList.remove('hide');
+    document.querySelector('#moon').classList.add('hide');
+  }else{
+    document.querySelector('#moon').classList.remove('hide');
+    document.querySelector('#sun').classList.add('hide');
+  }
   theme.setAttribute("data-theme", mode);
   tooggleSwitch.classList.toggle("darkmode");
   localStorage.setItem("theme", theme.getAttribute("data-theme"));
@@ -24,7 +31,6 @@ document.addEventListener("DOMContentLoaded", async () => {
     dateDev = document.querySelector("#date-dev"),
     authorFooter = document.querySelector("#authorFooter"),
     effect = document.querySelector("#effect1"),
-    skills = document.querySelector("#skills"),
     theme = document.querySelector("[data-theme]"),
     tooggleSwitch = document.querySelector("#toggleSwitch"),
     projects = document.querySelector("#projects"),
@@ -41,30 +47,23 @@ document.addEventListener("DOMContentLoaded", async () => {
     contact = document.querySelector(".contact"),
     bye = document.querySelector(".bye"),
     OBJDATA = new Data();
+  const closeModalBtn = document.querySelector('#close-dialog');
   let skill = "",
     language = OBJDATA.getData().migue.language,
     lang = navigator.language.split("-"),
     project = "",
     service = "",
     data,
-    row = 0,
-    column = 0,
     date = new Date(),
-    year = date.getFullYear(),
-    code,
-    nav = "",
-    menu = "";
+    year = date.getFullYear();
   if (!localStorage.getItem("theme")) {
-    if (
+    (
       window.matchMedia &&
       window.matchMedia("(prefers-color-scheme: dark)").matches
-    ) {
-      theme.setAttribute("data-theme", "dark");
-      localStorage.setItem("theme", "dark");
-    }
-  } else {
-    theme.setAttribute("data-theme", localStorage.getItem("theme"));
-  }
+    )
+      ? setTheme(theme, tooggleSwitch, "dark")
+      : setTheme(theme, tooggleSwitch, "light");
+  } else setTheme(theme, tooggleSwitch, localStorage.getItem("theme"));
   language = language[lang[0]];
   data = OBJDATA.getData();
   language.nav.map((value) => {
@@ -81,7 +80,8 @@ document.addEventListener("DOMContentLoaded", async () => {
 
   const menuItems = document.querySelectorAll(".header__menu a");
   homeData.innerHTML = `
-        <h1>${language.welcome}<br><span>${data.migue.name}</span></h1>
+        <h2>${language.welcome}</h2>
+        <h1 class="career">${data.migue.name}</h1>
         <h2>${language.description}</h2>
         <h2 class="career">${language.dev}</h2>
     `;
@@ -182,6 +182,52 @@ document.addEventListener("DOMContentLoaded", async () => {
     card.appendChild(cardFooter);
     return card;
   };
+
+  document.querySelector('dialog').addEventListener('click', function(event) {
+    const dialogRect = this.getBoundingClientRect();
+    if (
+      event.clientX < dialogRect.left || 
+      event.clientX > dialogRect.right || 
+      event.clientY < dialogRect.top || 
+      event.clientY > dialogRect.bottom
+    ) {
+      document.querySelector('dialog').close();
+    }
+  });
+
+  const modal = {
+    show: () => document.querySelector('dialog').showModal(),
+    hide: () => {
+      document.querySelector('dialog').close();
+      document.location.href = "#portfolio";
+    }
+  };
+  closeModalBtn?.addEventListener('click', () => modal.hide());
+
+  const buildModal = object => {
+    const img = document.querySelector('#img-dialog');
+    const title = document.querySelector('#title-dialog');
+    const type = document.querySelector('#type-dialog');
+    const date = document.querySelector('#date-dialog');
+    const description = document.querySelector('#description-dialog');
+    const skill = document.querySelector('.skills-dialog');
+    const skill2 = document.querySelector('.skills-dialog-2');
+    let sk = "";
+    img.src = object.imageSrc;
+    title.textContent = object.name;
+    type.textContent = object.type;
+    date.textContent = object.createdAt;
+    description.textContent = object.description[lang[0]] + object.description[lang[0]];
+    object.skill.forEach(a => {
+      sk += `<div class="tooltip">
+        <img class="img-skill" src="resources/img/code/${a.src}" alt="${a.name}"/>
+        <span class="tooltiptext">${a.name}</span>
+      </div>`;
+    })
+    skill.innerHTML = sk;
+    skill2.innerHTML = sk;
+  };
+
   const res = await fetch("resources/projects.json", { mode: 'no-cors' });
   if (!res.ok) return console.error("Not found");
   const projectsData = await res.json();
@@ -194,6 +240,10 @@ document.addEventListener("DOMContentLoaded", async () => {
         : project.description[lang[0]],
       project.createdAt
     );
+    card.addEventListener('click', () => {
+      buildModal(project);
+      modal.show();
+    });
     projects.appendChild(card);
   })
   setTimeout(() => {

@@ -4,7 +4,8 @@
 			"name": "InfoLead",
 			"type": "Mobile application",
 			"video": "https://www.youtube.com/watch?v=EeTu9iTn5z0",
-			"src": "resources/img/projects/infolead.png",
+			"src": "resources/img/projects/infolead.webp",
+			"imageSrc": "resources/img/projects/infolead.logo.webp",
 			"createdAt":"2024-05-09",
 			"store": {
 				"android": "https://play.google.com/store/apps/details?id=com.infoexpo.scanner.infolead&hl=en&pli=1",
@@ -17,11 +18,11 @@
 			"skill": [
 				{
 					"name": "Flutter",
-					"src": "flutter.png"
+					"src": "flutter.webp"
 				},
 				{
 					"name": "Dart",
-					"src": "dart.png"
+					"src": "dart.webp"
 				},
 				{
 					"name": "Symfony",
@@ -29,15 +30,15 @@
 				},
 				{
 					"name": "PHP",
-					"src": "php.png"
+					"src": "php.webp"
 				},
 				{
 					"name": "PostgreSql",
-					"src": "pgsql.png"
+					"src": "postgresql.webp"
 				},
 				{
 					"name": "JWT",
-					"src": "jwt.png"
+					"src": "jwt.webp"
 				},
 				{
 					"name": "Android",
@@ -45,11 +46,11 @@
 				},
 				{
 					"name": "IOS",
-					"src": "ios.png"
+					"src": "ios.webp"
 				},
 				{
 					"name": "Git",
-					"src": "git.png"
+					"src": "git.webp"
 				}
 			]
 		}
