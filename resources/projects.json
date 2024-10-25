@@ -41,16 +41,12 @@
 					"src": "jwt.webp"
 				},
 				{
-					"name": "Android",
-					"src": "android.png"
-				},
-				{
-					"name": "IOS",
-					"src": "ios.webp"
-				},
-				{
 					"name": "Git",
 					"src": "git.webp"
+				},
+				{
+					"name": "GitHub",
+					"src": "github.webp"
 				}
 			]
 		}

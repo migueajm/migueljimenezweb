@@ -118,14 +118,17 @@
           <div class="flex date-container">
             <span id="date-dialog" class="date"></span>
           </div>
-          <span class="date" style="position: relative; top: -2rem">Skill:</span>
-          <div class="skills-dialog flex"></div>
+          <div class="flex" id="download-dialog" style="position: absolute;bottom: -0.5rem;"></div>
         </div>
-        <div class="skills-dialog-2 flex"></div>
       </div>
       <hr>
-      <p id="description-dialog"></p>
+      <div style="display: grid; grid-template-columns: 90% 10%">
+        <p id="description-dialog"></p>
+        <div class="skills-dialog flex"></div>
+      </div>
     </div>
-  </dialog> 
+  </dialog>
+  <div class="container block-animate">
+  </div>
 </body>
 </html>
