@@ -49,6 +49,45 @@
 					"src": "github.webp"
 				}
 			]
+		},
+		{
+			"name": "store @migueajm",
+			"type": "Web application",
+			"video": null,
+			"src": "resources/img/projects/migueajmstore.ico",
+			"imageSrc": "resources/img/projects/migueajmstore.ico",
+			"createdAt":"2025-01-11",
+			"store": null,
+			"description": {
+				"es": "Nuestra App Web de Punto de Venta (POS) es una solución completa, diseñada para optimizar y simplificar la administración de tu negocio. Ideal para comercios, restaurantes y pequeñas empresas, esta herramienta combina funcionalidad, velocidad y facilidad de uso para que puedas concentrarte en lo más importante: ¡hacer crecer tu negocio!",
+				"en": "Nuestra App Web de Punto de Venta (POS) es una solución completa, diseñada para optimizar y simplificar la administración de tu negocio. Ideal para comercios, restaurantes y pequeñas empresas, esta herramienta combina funcionalidad, velocidad y facilidad de uso para que puedas concentrarte en lo más importante: ¡hacer crecer tu negocio!"
+			},
+			"skill": [
+				{
+					"name": "Symfony",
+					"src": "symfony.png"
+				},
+				{
+					"name": "PHP",
+					"src": "php.webp"
+				},
+				{
+					"name": "SQLite",
+					"src": "sqlite.webp"
+				},
+				{
+					"name": "JWT",
+					"src": "jwt.webp"
+				},
+				{
+					"name": "Git",
+					"src": "git.webp"
+				},
+				{
+					"name": "GitHub",
+					"src": "github.webp"
+				}
+			]
 		}
 	]
 }
