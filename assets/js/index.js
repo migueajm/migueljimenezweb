@@ -8,9 +8,9 @@ window.addEventListener('load', () => {
 	setTimeout(() => {
 		const base = window.location.pathname.replace(/\/$/, '');
 		if (lang.startsWith('es')) {
-			window.location.href = base + '/es/';
+			window.location.href = base + '/es/index';
 		} else {
-			window.location.href = base + '/en/';
+			window.location.href = base + '/en/index';
 		}
 	}, 2000);
 });

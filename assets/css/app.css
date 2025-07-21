@@ -28,7 +28,7 @@ body.dark-theme {
   --color-subtext: #a0a0a0;
   --color-title: #ffffff;
   --color-icon: #f1f1f1;
-  --color-border: #2a2a2a;  
+  --color-border: #2a2a2a;
   --color-primary: #3b82f6;
   --color-hover: #60a5fa;
   --color-secondary: #93c5fd;
@@ -283,8 +283,130 @@ i,
     opacity: 0;
     transform: translateY(-10px);
   }
+
   to {
     opacity: 1;
     transform: translateY(0);
+  }
+}
+
+body {
+  background-color: var(--color-bg);
+  color: var(--color-text);
+  font-family: 'Segoe UI', sans-serif;
+  margin: 0;
+}
+
+header {
+  background-color: var(--color-primary);
+  color: var(--btn-color);
+  padding: 1rem 2rem;
+  box-shadow: var(--shadow-header);
+}
+
+nav {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  flex-wrap: wrap;
+}
+
+nav h1 {
+  margin: 0;
+  font-size: 1.5rem;
+}
+
+nav ul {
+  list-style: none;
+  display: flex;
+  gap: 1rem;
+  padding: 0;
+  margin: 0;
+}
+
+nav a {
+  color: var(--btn-color);
+  text-decoration: none;
+  font-weight: 500;
+}
+
+nav a:hover {
+  color: var(--btn-hover-color);
+}
+
+main {
+  padding: 2rem;
+}
+
+section {
+  margin-bottom: 3rem;
+}
+
+#hero {
+  text-align: center;
+  background-color: var(--color-surface);
+  padding: 3rem 1rem;
+  border-radius: 12px;
+  box-shadow: 0 2px 8px var(--color-border);
+}
+
+h2 {
+  color: var(--color-title);
+  margin-bottom: 0.5rem;
+}
+
+article {
+  background-color: var(--color-surface);
+  padding: 1rem;
+  border-radius: 10px;
+  box-shadow: 0 2px 4px var(--color-border);
+}
+
+form {
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+  max-width: 500px;
+}
+
+input,
+textarea {
+  padding: 0.75rem;
+  border: 1px solid var(--color-border);
+  border-radius: 8px;
+  font-size: 1rem;
+  background-color: var(--color-surface);
+  color: var(--color-text);
+}
+
+button {
+  background-color: var(--btn-bg);
+  color: var(--btn-color);
+  padding: 0.75rem;
+  font-weight: bold;
+  border: none;
+  border-radius: 8px;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+button:hover {
+  background-color: var(--btn-hover-bg);
+  color: var(--btn-hover-color);
+}
+
+footer {
+  text-align: center;
+  background-color: var(--color-footer-bg);
+  color: var(--color-footer-text);
+  padding: 1rem;
+  font-size: 0.9rem;
+  box-shadow: var(--shadow-footer);
+}
+
+@media (max-width: 600px) {
+  nav ul {
+    flex-direction: column;
+    align-items: flex-start;
   }
 }
