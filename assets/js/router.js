@@ -1,7 +1,7 @@
 class Router {
 	constructor() { }
 	routeHandler() {
-		const path = window.location.pathname.replace('/migueljimenezweb', '') + ".js";
+		const path = window.location.pathname.replace('/migueljimenezweb/', '') + ".js";
 		import('./' + path)
 			.then((module) => {
 				new module.default();
