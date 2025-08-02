@@ -1,57 +1,60 @@
 <!DOCTYPE html>
-<html lang="es">
+<html lang="es" data-theme="light">
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Portafolio de @migueajm</title>
-  <meta name="description" content="Portafolio profesional en español de @migueajm, desarrollador web y móvil.">
-  <link rel="alternate" hreflang="es" href="/es/" />
-  <link rel="alternate" hreflang="en" href="/en/" />
-  <link rel="stylesheet" href="https://migueajm.github.io/migueljimenezweb/assets/css/app.css" />
-  <script type="module" src="https://migueajm.github.io/migueljimenezweb/assets/js/app.js"></script>
+  <title>Miguel Angel Jiménez - Portafolio</title>
+  <link rel="stylesheet" href="../assets/css/app.css" />
+
+  <script src="../assets/js/app.js" type="module"></script>
 </head>
 <body>
   <header>
+    <h1 class="logo">Miguel Angel Jiménez</h1>
     <nav>
-      <h1>Miguel Ángel Jiménez</h1>
       <ul>
-        <li><a href="#sobre-mi">Sobre mí</a></li>
-        <li><a href="#proyectos">Proyectos</a></li>
-        <li><a href="#contacto">Contacto</a></li>
-        <li><a href="../en/">English</a></li>
+        <li><a href="#about">Sobre mí</a></li>
+        <li><a href="#projects">Proyectos</a></li>
+        <li><a href="#contact">Contacto</a></li>
       </ul>
     </nav>
   </header>
+
   <main>
-    <section id="hero">
-      <h2>Desarrollador Web y Móvil</h2>
-      <p>Construyo soluciones modernas con tecnologías como Flutter, Vue, Symfony y más.</p>
+    <section class="hero">
+      <h2>Ingeniero de Software</h2>
+      <p>Apasionado por crear soluciones digitales con enfoque en calidad, escalabilidad y rendimiento</p>
     </section>
 
-    <section id="sobre-mi">
-      <h2>Sobre mí</h2>
-      <p>Soy desarrollador con más de 3 años de experiencia en desarrollo full stack.</p>
+    <section id="about">
+      <h3>Sobre mí</h3>
+      <p>Tengo 5 años de experiencia desarrollando soluciones digitales y participando en proyectos web y móviles, desde la recopilación de requerimientos hasta el mantenimiento.</p>
+      <p>Me especializo en soluciones escalables, mantenibles y orientadas a resultados, aplicando principios sólidos de ingeniería de software, diseño limpio, buenas prácticas y mejora continua tanto técnica como en la calidad del producto entregado.</p>
     </section>
 
-    <section id="proyectos">
-      <h2>Proyectos</h2>
-      <article>
-        <h3>Gestor de Tareas</h3>
-        <p>App web para organizar tareas personales con Vue 3 y Pinia.</p>
-      </article>
+    <section id="skills">
+      <h3>Habilidades</h3>
+      <div class="skills-tags">
+        <span>PHP</span><span>JavaScript</span><span>TypeScript</span><span>Symfony</span><span>Laravel</span><span>React</span><span>Angular</span><span>Node.js</span><span>Flutter</span><span>Ionic</span>
+      </div>
     </section>
 
-    <section id="contacto">
-      <h2>Contacto</h2>
+    <section id="projects">
+      <h3>Proyectos</h3>
+      <div class="project">
+        <h4>Administrador de Tareas</h4>
+        <p>Aplicación web para gestionar tareas usando arquitectura moderna de frontend y gestión de estados.</p>
+      </div>
+    </section>
+
+    <section id="contact">
+      <h3>Contacto</h3>
       <form>
-        <label for="nombre">Nombre:</label>
-        <input id="nombre" name="nombre" type="text" required />
+        <label for="name">Nombre</label>
+        <input type="text" id="name" name="name" required />
 
-        <label for="correo">Correo:</label>
-        <input id="correo" name="correo" type="email" required />
-
-        <label for="mensaje">Mensaje:</label>
-        <textarea id="mensaje" name="mensaje" rows="4" required></textarea>
+        <label for="email">Correo electrónico</label>
+        <input type="email" id="email" name="email" required />
 
         <button type="submit">Enviar</button>
       </form>
@@ -59,7 +62,8 @@
   </main>
 
   <footer>
-    <p>&copy; 2025 @migueajm. Todos los derechos reservados.</p>
+    <p>© 2025 @miguelajm. Todos los derechos reservados.</p>
+    <button id="theme-toggle">Cambiar tema</button>
   </footer>
 </body>
 </html>

@@ -9,8 +9,13 @@ window.addEventListener('load', () => {
 		? 'Configurando la aplicación, por favor espera...'
 		: 'Setting up the application, please wait...';
 	Loader.show(message);
+	
 });
 document.addEventListener('DOMContentLoaded', () => {
-	setTimeout(() => Loader.hide(), 2000);
 	router.routeHandler();
+	document.getElementById('theme-toggle').addEventListener('click', () => {
+		const currentTheme = document.documentElement.getAttribute('data-theme');
+		const newTheme = currentTheme === 'dark' ? 'light' : 'dark';
+		document.documentElement.setAttribute('data-theme', newTheme);
+	});
 });
