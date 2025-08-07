@@ -126,6 +126,7 @@ document.addEventListener('DOMContentLoaded', () => {
 				img.src = `https://migueajm.github.io/migueljimenezweb/assets/images/code/${icon}.webp`;
 				img.alt = icon;
 				img.loading = 'lazy';
+				img.style.backgroundColor = 'white';
 				img.addEventListener('error', () => {
 					img.style.display = 'none';
 				})
