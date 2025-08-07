@@ -1,4 +1,5 @@
 import { router } from './router.js';
+import Dialog from './utilities/dialog.js';
 import { Loader } from './utilities/loader.js';
 import { SecureStorageManager } from './utilities/secure_store_mnager.js';
 
@@ -45,9 +46,101 @@ document.addEventListener('DOMContentLoaded', () => {
 		content.classList.toggle('show');
 	}
 
-	document.querySelector('#age').textContent = (new Date).getFullYear();
-	document.querySelector('#version').textContent = 'v2.0.0';
+	window.createIframe = url => {
+		const loader = Loader.getElement('');
+		const container = document.createElement('div');
+		container.setAttribute('style', 'display: flex; justify-content: center');
+		const iframe = document.createElement('iframe');
+		iframe.src = url;
+		iframe.width = '100%';
+		iframe.height = '400';
+		iframe.style.border = 'none';
+		iframe.loading = 'lazy';
+		iframe.load
+		container.appendChild(loader);
+		container.appendChild(iframe);
+		iframe.style.display = 'none';
+		iframe.addEventListener('load', () => {
+			loader.remove();
+			iframe.style.display = 'block';
+		});
+		setTimeout(() => {
+			if (iframe.style.display === 'none') {
+				loader.remove();
+				iframe.style.display = 'block';
+			}
+		}, 3000);
+		return container;
+	}
 
+	document.querySelector('#age').textContent = (new Date).getFullYear();
+	[...document.querySelectorAll('a')].forEach(anchor => {
+		anchor.addEventListener('click', async (e) => {
+			e.preventDefault();
+			const a = e.currentTarget;
+			const href = a.href;
+			if (href.hash != '') {
+				window.location.href = href;
+				return;
+			}
+			const url = a.href;
+			const origin = (new URL(url)).origin;
+			const blockedOrigins = [
+				'https://github.com',
+				'https://facebook.com',
+				'https://www.facebook.com',
+				'https://twitter.com',
+				'https://www.instagram.com',
+				'https://accounts.google.com',
+				'https://linkedin.com',
+				'https://www.linkedin.com',
+			];
+			if(blockedOrigins.some(blocked => origin.startsWith(blocked))){
+				window.open(url, '_blank');
+				return;
+			}
+			Dialog.show({
+				title: origin,
+				htmlElement: createIframe(url),
+				size: Dialog.size('xl'),
+				hideBtn: true
+			});
+		});
+	});
+
+	const defaultIcons = ['html', 'css', 'materialize', 'bootstrap', 'tailwind', 'jwt'];
+	const previews = {
+		php: ['php', 'laravel', 'symfony', 'composer', 'apache', ...defaultIcons],
+		javascript: ['js', 'jquery', 'ts', 'nodejs', 'angular', 'ionic', 'react', 'vue', ...defaultIcons],
+		sql: ['sql', 'postgresql', 'mysql'],
+		git: ['git', 'github', 'gitlab', 'bitbucket'],
+		dart: ['dart', 'flutter', 'android', 'ios']
+	};
+
+	document.querySelectorAll('span.outlined-button').forEach(tag => {
+		tag.addEventListener('mouseover', () => {
+			const skill = tag.textContent.toLowerCase().trim();
+			const container = document.getElementById('preview-box');
+			container.hidden = false;
+			container.className = 'preview-box';
+			container.innerHTML = '';
+			previews[skill]?.forEach(icon => {
+				const img = document.createElement('img');
+				img.src = `https://migueajm.github.io/migueljimenezweb/assets/images/code/${icon}.webp`;
+				img.alt = icon;
+				img.addEventListener('error', () => {
+					img.style.display = 'none';
+				})
+				container.appendChild(img);
+			});
+		});
+		tag.addEventListener('mouseout', () => {
+			const container = document.getElementById('preview-box');
+			container.className = '';
+			container.hidden = true;
+			container.textContent = '';
+		});
+	});
 	const theme = secureStorage.get('theme');
 	if(!theme){
 		return;

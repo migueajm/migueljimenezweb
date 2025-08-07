@@ -7,12 +7,7 @@ export class Loader {
 			const backdrop = document.createElement('div');
 			backdrop.id = this.loaderId;
 			backdrop.className = 'app-loader-backdrop';
-			backdrop.innerHTML = `
-          <div class="app-loader">
-            <div class="app-loader-spinner"></div>
-            <div class="app-loader-message">${message}</div>
-          </div>
-        `;
+			backdrop.appendChild(Loader.getElement(message));
 			document.body.appendChild(backdrop);
 			return;
 		}
@@ -28,5 +23,12 @@ export class Loader {
 			backdrop.style.display = 'none';
 		}
 		document.body.style.pointerEvents = 'auto';
+	}
+
+	static getElement(message) {
+		const div = document.createElement('div');
+		div.className = 'app-loader';
+		div.innerHTML = `<div class="app-loader-spinner"></div><div class="app-loader-message">${message}</div>`;
+		return div;
 	}
 }
