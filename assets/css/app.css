@@ -282,7 +282,7 @@ footer {
 }
 
 .outlined-button:hover,
-button:hover {
+button:hover, .outlined-button.active {
   transform: scale(1.01);
   background-color: var(--primary-color);
   color: white;
@@ -517,18 +517,15 @@ button:hover {
 
 .preview-box {
   margin-top: 20px;
-  height: 60px;
+  width: 100%;
   display: flex;
-  gap: 8px;
-  overflow-x: auto;
-  scroll-behavior: smooth;
-  scroll-snap-type: x mandatory;
-  -webkit-overflow-scrolling: touch;
+  gap: 1.5rem;
+  flex-wrap: wrap;
 }
 
 .preview-box img {
   flex-shrink: 0;
-  height: 48px;
+  height: 100px;
   aspect-ratio: 1 / 1;
   object-fit: contain;
   padding: 4px;
