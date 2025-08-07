@@ -7,7 +7,7 @@ export class Loader {
 			const backdrop = document.createElement('div');
 			backdrop.id = this.loaderId;
 			backdrop.className = 'app-loader-backdrop';
-			backdrop.appendChild(Loader.getElement(message));
+			backdrop.appendChild(Loader.getElement({message}));
 			document.body.appendChild(backdrop);
 			return;
 		}
@@ -25,8 +25,11 @@ export class Loader {
 		document.body.style.pointerEvents = 'auto';
 	}
 
-	static getElement(message) {
+	static getElement({message = '', id = null}) {
 		const div = document.createElement('div');
+		if(id){
+			div.id = id;
+		}
 		div.className = 'app-loader';
 		div.innerHTML = `<div class="app-loader-spinner"></div><div class="app-loader-message">${message}</div>`;
 		return div;
