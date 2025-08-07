@@ -30,10 +30,6 @@ html[data-theme="dark"] {
   --badge-color: #82cfff;
 }
 
-html[data-theme="light"] .outlined-button {
-  background-color: var(--primary-color);
-}
-
 * {
   margin: 0;
   padding: 0;
