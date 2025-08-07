@@ -113,11 +113,7 @@ document.addEventListener('DOMContentLoaded', () => {
 	};
 
 	document.querySelectorAll('span.outlined-button').forEach(tag => {
-		let timeout = null;
 		tag.addEventListener('mouseover', () => {
-			if(timeout != null) {
-				clearTimeout(timeout);
-			}
 			document.querySelectorAll('span.outlined-button').forEach(t => t.classList.remove('active'));
 			tag.classList.add('active');
 			const skill = tag.textContent.toLowerCase().trim();
@@ -135,12 +131,6 @@ document.addEventListener('DOMContentLoaded', () => {
 				})
 				container.appendChild(img);
 			});
-			timeout = setTimeout(() => {
-				tag.classList.remove('active');
-				container.className = '';
-				container.hidden = true;
-				container.textContent = '';
-			}, (1000 * 10));
 		});
 	});
 	const theme = secureStorage.get('theme');
