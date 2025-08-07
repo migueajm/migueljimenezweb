@@ -74,15 +74,10 @@ document.addEventListener('DOMContentLoaded', () => {
 	}
 
 	document.querySelector('#age').textContent = (new Date).getFullYear();
-	[...document.querySelectorAll('a')].forEach(anchor => {
+	[...document.querySelectorAll('a.a-iframe')].forEach(anchor => {
 		anchor.addEventListener('click', async (e) => {
 			e.preventDefault();
 			const a = e.currentTarget;
-			const href = a.href;
-			if (href.hash != '') {
-				window.location.href = href;
-				return;
-			}
 			const url = a.href;
 			const origin = (new URL(url)).origin;
 			const blockedOrigins = [
