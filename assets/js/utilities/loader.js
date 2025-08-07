@@ -25,7 +25,7 @@ export class Loader {
 		document.body.style.pointerEvents = 'auto';
 	}
 
-	static getElement({message = '', id = null}) {
+	static getElement({message = '', id = null} = {}) {
 		const div = document.createElement('div');
 		if(id){
 			div.id = id;
