@@ -1,69 +1,153 @@
 <!DOCTYPE html>
-<html lang="es" data-theme="light">
+<html lang="en" data-theme="dark">
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Miguel Angel Jiménez - Portafolio</title>
+  <title>Miguel Angel Jiménez - Portfolio</title>
   <link rel="stylesheet" href="../assets/css/app.css" />
-
   <script src="../assets/js/app.js" type="module"></script>
 </head>
 <body>
   <header>
     <h1 class="logo">Miguel Angel Jiménez</h1>
-    <nav>
+    <div id="hamburger" class="hamburger">
+      <span></span>
+      <span></span>
+      <span></span>
+    </div>
+    <nav id="nav-menu">
       <ul>
-        <li><a href="#about">Sobre mí</a></li>
+        <li><a href="#about">Sobre mi</a></li>
         <li><a href="#projects">Proyectos</a></li>
-        <li><a href="#contact">Contacto</a></li>
+        <li><a href="#experience">Experiencia profesional</a></li>
+        <li><a onclick="showGithub()">Github</a></li>
       </ul>
     </nav>
   </header>
-
   <main>
+    <div class="floating flex-column">
+      <a href="mailto:miguejm@outlook.es?subject=Consulta%20sobre%20proyecto%20de%20desarrollo%20web&body=Hola%20Miguel%2C%0D%0A%0D%0AEstuve revisando tu portafolio y me gustaría ponerme en contacto contigo para discutir una posible colaboración o proyecto de desarrollo.%0D%0A%0D%0AQuedo atento(a)%20a%20tus%20comentarios.%0D%0A%0D%0ASaludos%2C" class="outlined-button"><span class="icon">✉️</span></a>
+      <a id="theme-toggle" class="outlined-button">☀️</a>
+    </div>
     <section class="hero">
-      <h2>Ingeniero de Software</h2>
-      <p>Apasionado por crear soluciones digitales con enfoque en calidad, escalabilidad y rendimiento</p>
+      <div>
+        <div>
+          <img src="https://migueajm.github.io/migueljimenezweb/assets/images/profile.webp" alt="Profile" width="300">
+        </div>
+        <div>
+          <h2>Software Engineer</h2>
+          <p>Enfocado en ofrecer soluciones web y móviles robustas, escalables y eficientes mediante una arquitectura limpia y un código mantenible.</p>
+        </div>
+      </div>
     </section>
 
     <section id="about">
-      <h3>Sobre mí</h3>
-      <p>Tengo 5 años de experiencia desarrollando soluciones digitales y participando en proyectos web y móviles, desde la recopilación de requerimientos hasta el mantenimiento.</p>
-      <p>Me especializo en soluciones escalables, mantenibles y orientadas a resultados, aplicando principios sólidos de ingeniería de software, diseño limpio, buenas prácticas y mejora continua tanto técnica como en la calidad del producto entregado.</p>
+      <h3>Sobre mi</h3>
+      <p>Con más de 5 años de experiencia en desarrollo de software, he contribuido en proyectos web y móviles, participando activamente en todo el ciclo de vida del desarrollo — desde la recolección de requisitos hasta el mantenimiento a largo plazo.</p>
+      <p>Me especializo en crear soluciones escalables y mantenibles, aplicando sólidos principios de ingeniería de software, arquitectura limpia y buenas prácticas para garantizar la mejora continua y la entrega constante de productos de alta calidad.</p>
     </section>
 
     <section id="skills">
       <h3>Habilidades</h3>
       <div class="skills-tags">
-        <span>PHP</span><span>JavaScript</span><span>TypeScript</span><span>Symfony</span><span>Laravel</span><span>React</span><span>Angular</span><span>Node.js</span><span>Flutter</span><span>Ionic</span>
+        <span>PHP</span><span>JavaScript</span><span>TypeScript</span><span>SQL</span><span>Git</span><span>Symfony</span><span>Laravel</span><span>React</span><span>Angular</span><span>Node.js</span><span>Flutter</span><span>Ionic</span><span>Clean code</span><span>POO</span><span>SOLID</span><span>DDD</span><span>ORM</span>
       </div>
     </section>
 
     <section id="projects">
-      <h3>Proyectos</h3>
+      <h3>Projects</h3>
       <div class="project">
-        <h4>Administrador de Tareas</h4>
-        <p>Aplicación web para gestionar tareas usando arquitectura moderna de frontend y gestión de estados.</p>
+        <h4></h4>
+        <p></p>
       </div>
     </section>
-
-    <section id="contact">
-      <h3>Contacto</h3>
-      <form>
-        <label for="name">Nombre</label>
-        <input type="text" id="name" name="name" required />
-
-        <label for="email">Correo electrónico</label>
-        <input type="email" id="email" name="email" required />
-
-        <button type="submit">Enviar</button>
-      </form>
+    <section id="experience">
+      <h3>Experiencia profesional</h3>
+      <div class="timeline">
+        <div class="timeline-item">
+          <button class="outlined-button" onclick="toggleDetails(this)">
+            <span>Ene 2025 - Actualidad</span>
+            <br>
+            Desarrollador SR @ <a href="https://www.infoexpo.com.mx/home/">Infoexpo</a>
+          </button>
+          <div class="timeline-content">
+            <h4>Desarrollador SR @ <a href="https://www.infoexpo.com.mx/home/">Infoexpo</a></h4>
+            <p>Ascendido al puesto de Desarrollador Web Senior y asignado como Líder Técnico del Departamento de Lectoras, asumo responsabilidades estratégicas en la arquitectura, dirección técnica y gestión del equipo de desarrollo. Lidero la evolución tecnológica de las plataformas InfoLead y AL, coordinando la implementación de nuevas funcionalidades, asegurando estándares de calidad, y garantizando una entrega eficiente y alineada con los objetivos del negocio.<br>Asimismo, se me encomendó la investigación y ejecución del proceso de migración hacia tecnologías más modernas, con el fin de optimizar el rendimiento, la escalabilidad y la mantenibilidad de nuestras soluciones.</p>
+          </div>
+        </div>
+        <div class="timeline-item">
+          <button class="outlined-button" onclick="toggleDetails(this)">
+            <span>Ene 2023 - Dic 2024</span>
+            <br>
+            Desarrollador SSR @ <a href="https://www.infoexpo.com.mx/home/">Infoexpo</a>
+          </button>
+          <div class="timeline-content">
+            <h4>Desarrollador SSR @ <a href="https://www.infoexpo.com.mx/home/">Infoexpo</a></h4>
+            <p>Ascendido al rol de desarrollador SSR, lideré la migración y reconstrucción completa del sistema web para la gestión de InfoLead, una aplicación móvil desarrollada por la empresa. También fui responsable de migrar InfoLead a una nueva tecnología móvil, resolviendo diversos problemas heredados. Además, continúo colaborando activamente en el mantenimiento y desarrollo de nuevas funcionalidades para otras herramientas y productos clave de la empresa.</p>
+          </div>
+        </div>
+        <div class="timeline-item">
+          <button class="outlined-button" onclick="toggleDetails(this)">
+            <span>Nov 2022 - Dic 2022</span>
+            <br>
+            Desarrollador de sistemas @ <a href="https://frescopack.com">FrescoPack</a>
+          </button>
+          <div class="timeline-content">
+            <h4>Desarrollador de sistemas @ <a href="https://frescopack.com">FrescoPack</a></h4>
+            <p>Durante un breve periodo, colaboré en el mantenimiento de un sistema de facturación electrónica, participando en la migración de la versión CFDI 3.3 a CFDI 4.0, asegurando el cumplimiento con los nuevos requerimientos fiscales.</p>
+          </div>
+        </div>
+        <div class="timeline-item">
+          <button class="outlined-button" onclick="toggleDetails(this)">
+            <span>Mar 2022 - Nov 2022</span>
+            <br>
+            Desarrollador web JR @ <a href="https://www.infoexpo.com.mx/home/">Infoexpo</a>
+          </button>
+          <div class="timeline-content">
+            <h4>Desarrollador web JR @ <a href="https://www.infoexpo.com.mx/home/">Infoexpo</a></h4>
+            <p>Continué desempeñándome como desarrollador web junior utilizando Symfony como tecnología principal. Durante este periodo, participé activamente en el mantenimiento y desarrollo de nuevas funcionalidades para herramientas clave de la empresa, como el módulo de <a href="https://www.infoexpo.com.mx/home/productos/">Citas de negocios, registro en sitio y otros proyectos internos</a>, aportando mejoras que optimizaron su rendimiento y experiencia de usuario.</p>
+          </div>
+        </div>
+        <div class="timeline-item">
+          <button class="outlined-button" onclick="toggleDetails(this)">
+            <span>Nov 2021 - Abr 2022</span>
+            <br>
+            Desarrollador web JR @ <a href="https://kurigage.com">Kurigage</a>
+          </button>
+          <div class="timeline-content">
+            <h4>Desarrollador web junior @ <a href="https://kurigage.com">Kurigage</a></h4>
+            <p>Comencé participando en tareas de maquetación HTML para promociones de productos, además de investigar la implementación del ORM de Symfony para múltiples conexiones a bases de datos. Posteriormente, se me asignó un proyecto clave para iniciar la transición de aplicaciones MPA (Symfony) hacia SPA, utilizando React como frontend.<br>En este proyecto desarrollé desde cero un módulo de autenticación y una interfaz para listar productos con análisis estadísticos (media, moda, etc.) filtrados por zonas. Este trabajo marcó el primer paso hacia la adopción de tecnologías modernas dentro del equipo.</p>
+          </div>
+        </div>
+        <div class="timeline-item">
+          <button class="outlined-button" onclick="toggleDetails(this)">
+            <span>Feb 2021 - Jul 2021</span>
+            <br>
+            Desarrollador web – Practicas profesionales @ <a href="https://www.crodecelaya.tecnm.mx/">CRODE-Celaya</a>
+          </button>
+          <div class="timeline-content">
+            <h4>Desarrollador web – Practicas profesionales @ <a href="https://www.crodecelaya.tecnm.mx/">CRODE-Celaya</a></h4>
+            <p>Durante mi periodo de prácticas profesionales, participé en el desarrollo de una aplicación web orientada a la gestión y control de equipos y bienes informáticos. Me encargué del diseño de interfaces y la implementación de funcionalidades clave utilizando tecnologías como PHP, MySQL, JavaScript y Bootstrap. Este proyecto fortaleció mis habilidades en desarrollo full stack y en la comprensión de procesos administrativos y técnicos dentro de una organización.</p>
+          </div>
+        </div>
+        <div class="timeline-item">
+          <button class="outlined-button" onclick="toggleDetails(this)">
+            <span>Ago 2016 - Ene 2021</span>
+            <br>
+            Estudiante @ <a href="https://roque.tecnm.mx/">TecNM-Roque</a>
+          </button>
+          <div class="timeline-content">
+            <h4>Estudiante @ <a href="https://roque.tecnm.mx/">TecNM-Roque</a></h4>
+            <p>Durante esta etapa me enfoqué en adquirir las bases del desarrollo web, explorando tecnologías como HTML, CSS, JavaScript y PHP. Participé en pequeños proyectos personales y colaborativos, lo que me permitió entender los principios fundamentales de la programación, el control de versiones con Git y la estructura de aplicaciones web modernas.</p>
+          </div>
+        </div>
+      </div>
     </section>
   </main>
 
   <footer>
-    <p>© 2025 @miguelajm. Todos los derechos reservados.</p>
-    <button id="theme-toggle">Cambiar tema</button>
+    <p>© 2021 - <span id="age">2025</span> @miguelajm. Todos los derechos reservados.</p>
+    <p id="version"></p>
   </footer>
 </body>
 </html>
