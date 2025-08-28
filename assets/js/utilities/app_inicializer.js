@@ -35,8 +35,15 @@ export default class AppInitializer {
   initTheme() {
     window.setTheme = (theme) => {
       const isDark = theme === 'dark';
-      const newTheme = isDark ? 'dark' : 'light';
-      const icon = isDark ? '🌙' : '☀️';
+      const img = document.querySelector('section.hero img');
+      let newTheme = 'dark';
+      let icon = '🌙';
+      img.src = `https://migueajm.github.io/migueljimenezweb/assets/images/profile1.webp`;
+      if(!isDark){
+        icon = '☀️';
+        newTheme = 'light';
+        img.src = `https://migueajm.github.io/migueljimenezweb/assets/images/profile3.1.webp`;
+      }
       document.getElementById('theme-toggle').textContent = icon;
       document.documentElement.setAttribute('data-theme', newTheme);
       this.secureStorage.set('theme', newTheme);
