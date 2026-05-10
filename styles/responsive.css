@@ -1,0 +1,43 @@
+@media (max-width: 992px) {
+    .grid-2.grid-s-1,
+    .grid-3 {
+        grid-template-columns: 1fr;
+    }
+
+    .hero {
+        padding-top: 8rem;
+    }
+}
+
+@media (max-width: 768px) {
+    .navbar-links {
+        display: none;
+    }
+
+    .mobile-menu-button {
+        display: flex;
+
+        align-items: center;
+        justify-content: center;
+    }
+
+    .section {
+        padding: 5rem 0;
+    }
+
+    .hero-actions {
+        flex-direction: column;
+    }
+
+    .card {
+        padding: 1.5rem;
+    }
+
+    .hero-title {
+        font-size: 3.2rem;
+    }
+
+    .navbar {
+        padding: .8rem 1rem;
+    }
+}
