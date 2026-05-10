@@ -19,6 +19,7 @@ export default {
         description:
             'Soy un Full Stack Developer especializado en aplicaciones web y móviles modernas, enfocado en crear soluciones escalables, mantenibles y de alto rendimiento.',
         cards: {
+            years: '3+ Años',
             experience: 'Experiencia Profesional',
             frontend: 'Desarrollo UI Moderno',
             backend: 'APIs y Sistemas Escalables',

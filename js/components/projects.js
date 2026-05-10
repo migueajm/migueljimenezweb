@@ -1,8 +1,5 @@
 import { projects } from '../data/projects.js';
-
-import {
-    currentLanguage
-} from '../language.js';
+import { currentLanguage, t } from '../language.js';
 
 const renderProjects = () =>
     projects.map((project) => `
@@ -44,7 +41,7 @@ export const Projects = () => `
     <div class="container">
         <div class="fade-up">
             <h2 class="section-title">
-                Projects
+                ${t('projects.title')}
             </h2>
         </div>
 

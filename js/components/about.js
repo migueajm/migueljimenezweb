@@ -18,7 +18,7 @@ export const About = () => `
 
         <div class="grid-2">
             <div class="card glass scale-in">
-                <h3>3+ Years</h3>
+                <h3>${t('about.cards.years')}</h3>
                 <p>
                     ${t('about.cards.experience')}
                 </p>
@@ -39,7 +39,7 @@ export const About = () => `
             </div>
 
             <div class="card glass scale-in">
-                <h3>Mobile</h3>
+                <h3>Mobile/Desktop</h3>
                 <p>
                     ${t('about.cards.mobile')}
                 </p>

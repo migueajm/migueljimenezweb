@@ -1,4 +1,5 @@
 import { skills } from '../data/skills.js';
+import { t } from '../language.js';
 
 const renderSkills = (items) =>
     items.map((skill) => `
@@ -15,7 +16,7 @@ export const Skills = () => `
     <div class="container">
         <div class="fade-up">
             <h2 class="section-title">
-                Skills
+                ${t('skills.title')}
             </h2>
         </div>
         <div class="grid-2 grid-s-1">
@@ -36,7 +37,7 @@ export const Skills = () => `
                 </div>
             </div>
             <div class="card glass">
-                <h3>Mobile</h3>
+                <h3>Mobile/Desktop</h3>
                 <div class="skills-list">
                     ${renderSkills(
                         skills.mobile

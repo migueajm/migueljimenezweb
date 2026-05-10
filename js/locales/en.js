@@ -21,6 +21,7 @@ export default {
         description:
             'I am a Full Stack Developer specialized in modern web and mobile applications, focused on creating scalable, maintainable and high-performance solutions.',
         cards: {
+            years: '3+ Years',
             experience: 'Professional Experience',
             frontend: 'Modern UI Development',
             backend: 'Scalable APIs & Systems',

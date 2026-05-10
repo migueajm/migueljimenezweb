@@ -22,7 +22,8 @@ export const skills = {
         'Flutter',
         'Dart',
         'Android',
-        'iOS'
+        'iOS',
+        'Windows'
     ],
 
     database: [

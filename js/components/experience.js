@@ -1,5 +1,5 @@
 import { experience } from '../data/experience.js';
-import { currentLanguage } from '../language.js';
+import { currentLanguage, t } from '../language.js';
 
 const renderExperience = () =>
     experience.map((job) => `
@@ -30,7 +30,7 @@ export const Experience = () => `
     <div class="container">
         <div class="fade-up">
             <h2 class="section-title">
-                Experience
+                ${t('experience.title')}
             </h2>
         </div>
 
