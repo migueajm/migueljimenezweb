@@ -427,3 +427,48 @@
     font-weight: 500;
     color: var(--text-primary);
 }
+
+.error-page {
+    min-height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 2rem;
+}
+
+.error-card {
+    width: 100%;
+    max-width: 620px;
+    text-align: center;
+    padding: 4rem 3rem;
+}
+
+.error-code {
+    font-size: clamp(5rem, 12vw, 8rem);
+    font-weight: 800;
+    line-height: 1;
+    display: block;
+    margin-bottom: 1rem;
+}
+
+.error-title {
+    font-size: clamp(2rem, 5vw, 3rem);
+    margin-bottom: 1rem;
+    color: var(--text-primary);
+}
+
+.error-description {
+    font-size: 1.05rem;
+    color: var(--text-secondary);
+    line-height: 1.8;
+    max-width: 520px;
+    margin:
+        0 auto 2rem auto;
+}
+
+.error-actions {
+    display: flex;
+    justify-content: center;
+    gap: 1rem;
+    flex-wrap: wrap;
+}

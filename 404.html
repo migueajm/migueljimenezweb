@@ -1,0 +1,123 @@
+<!DOCTYPE html>
+
+<html lang="en">
+<head>
+    <meta charset="UTF-8" />
+
+    <meta
+        name="viewport"
+        content="
+            width=device-width,
+            initial-scale=1.0
+        "
+    />
+
+    <title>
+        404 • Page Not Found
+    </title>
+
+    <link
+        rel="icon"
+        type="image/svg+xml"
+        href="./assets/icons/favicon.svg"
+    />
+
+    <link
+        rel="stylesheet"
+        href="./styles/globals.css"
+    />
+
+    <link
+        rel="stylesheet"
+        href="./styles/components.css"
+    />
+
+    <link
+        rel="stylesheet"
+        href="./styles/responsive.css"
+    />
+</head>
+
+<body>
+    <main class="error-page">
+        <div
+            class="
+                error-card
+                glass
+                fade-up
+            "
+        >
+            <span
+                class="
+                    gradient-text
+                    error-code
+                "
+            >
+                404
+            </span>
+
+            <h1 class="error-title">
+                Page Not Found
+            </h1>
+
+            <p class="error-description">
+                The page you are trying to
+                access does not exist or
+                may have been moved.
+            </p>
+
+            <div class="error-actions">
+                <a
+                    href="/"
+                    class="
+                        button
+                        button-primary
+                    "
+                >
+                    Go Home
+                </a>
+
+                <button
+                    onclick="history.back()"
+                    class="
+                        button
+                        button-secondary
+                    "
+                >
+                    Go Back
+                </button>
+            </div>
+        </div>
+    </main>
+
+    <script type="module">
+        import {
+            initTheme
+        } from './js/theme.js';
+
+        initTheme();
+
+        const card =
+            document.querySelector(
+                '.error-card'
+            );
+
+        requestAnimationFrame(() => {
+            card.classList.add(
+                'visible'
+            );
+        });
+    </script>
+    <script>
+        const path =
+            window.location.pathname;
+
+        sessionStorage.setItem(
+            'redirect-path',
+            path
+        );
+
+        window.location.href = '/';
+    </script>
+</body>
+</html>
